@@ -14,7 +14,7 @@ export default function Article({data}:any){
 }
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
-    let slug:string;
+    let slug:string|string[]|undefined;
     if(context.params!==undefined){
        slug=context.params.slug;
     }
@@ -96,7 +96,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
             ]
         },
     ]
-    let data:any=arrayData.find((value)=>value.slug===slug.toLowerCase());
+     let data:any=arrayData.find((value)=>value.slug===slug);
      data=data?data:null;
      if(!data){
         return {
