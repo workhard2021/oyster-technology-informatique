@@ -6,8 +6,8 @@ type propsItemOffre={
      offres:{icone:string|'',text:string}[],
 }
 export const ItemOffres=({data}:any)=>{
-    return (<div className="relative w-full py-8">
-              <div className="w-full text-center text-4xl py-8">Notre offre de services</div>
+    return (<div className="relative w-full py-2">
+              <div className="w-full text-center text-4xl py-4">Notre offre de services</div>
                <div className="w-full flex justify-center items-center flex-wrap">
                  {data && data.map((value:any,index:number)=>
                   <div key={index} className="relative md:w-[40%] w-full  bg-white shadow-xl shadow-gray-300 xl:h-[400px] md:h-[500px] h-[450px] m-4">
@@ -40,7 +40,7 @@ ItemOffres.defaultProps={
             {icon:'',text:'Performance opérationnelle'},
             {icon:'',text:'Responsabilité sociétal et environnementale'},
             {icon:'',text:'Modernisation des assets technologiques'},
-            {icon:'',text:'Gouvernance du SI'},
+            // {icon:'',text:'Gouvernance du SI'},
             ]
         },
         { title:'Direction de programme',

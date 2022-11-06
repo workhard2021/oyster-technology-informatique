@@ -3,7 +3,7 @@ import { Fragment } from 'react';
 import {BsTwitter,BsLinkedin,BsFacebook} from 'react-icons/bs';
 
 export const Teams=({data,sub_title,title}:any)=>{
-        return (<div className="w-full p-8 bg-gray-100">
+        return (<div className="w-full py-8 px-4 mt-4 bg-gray-50">
             {title?<div className="w-full text-center text-sm uppercase text-blue-900 font-bold py-2">{title}</div>:null}
             {sub_title?<div className="w-full text-center text-3xl font-bold py-2">{sub_title}</div>:null}
             <div className="w-full md:w-[90%] m-auto flex justify-center items-center pt-16 mb-8 flex-wrap">

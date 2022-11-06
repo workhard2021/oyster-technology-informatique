@@ -3,9 +3,9 @@ import { Fragment } from "react"
 import {BsTwitter,BsLinkedin,BsFacebook} from 'react-icons/bs';
 
 export const Footer=({newtwork,right,page}:any)=>{
-    return (<footer className="w-full p-12 text-white bg-blue-900">
+    return (<footer className="w-full p-4 text-white bg-blue-900">
         <div className="w-full flex justify-evenly flex-wrap">
-           <div className="md:w-[40%] w-full flex justify-around items-center md:my-auto my-3">
+           <div className="md:w-[40%] w-full flex md:justify-around items-center md:my-auto my-3">
                {page && page.map((value:any,key:number)=>
                  <Link className="first-letter:capitalize" key={key} href={value.url}>{value.title}</Link>
                )}
