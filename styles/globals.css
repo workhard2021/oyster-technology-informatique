@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+.bg-url{
+  background-position: center;
+  background-repeat:no-repeat;
+  background-size: cover;
+  filter:saturate(1.2);
+}
+.bg-url_teams{
+  background-position: center;
+  background-repeat:no-repeat;
+  background-size: cover;
+  filter:opacity(20%);
+}
+
+.bg-url-logo{
+  background-position: center;
+  background-repeat:no-repeat;
+  background-size: contain;
+}
+.sub_menu{
+  visibility: hidden;
+  opacity: 0;
+  transition:  all 0.8s ease-in-out;
+}
+.menu:hover .sub_menu{
+  top: 60px;
+  opacity: 1;
+  visibility: visible;
+}
+.changeImage{
+  transition: all 0.5s ease-in-out;
+}
+
+.btn_navigation{
+  display: none;
+}
+.cursor-pointer:hover ~ .btn_navigation{
+  display: inline-block;
+}
+.hover_scale_nos_idee{
+  transition:all 0.7s ease-in-out;
+}
+.hover_scale_nos_idee:hover{
+  transform: scale(1.05);
+}
+/* mobile */
+.menu_mobile:hover .sub_menu_mobile{
+    height: auto;
+    overflow: visible;
+    display: flex;
+    flex-direction: column;
+}
+
+/*  */
+
+.container-carousel-scroll{
+display: flex;
+width:100%;
+overflow-x: auto;
+overflow-y:hidden;
+height:400px;
+margin:auto;
+padding:2px;
+position: relative;
+align-items:center;
+background-color:whitesmoke;
+}
+.item{
+ min-width:260px;
+ height:100%;
+ position:relative;
+ background-color:white;
+ margin:auto 3px;
+ display: block;
+}
+.item_categorie{
+ position: relative;
+ min-width:250px;
+ height:100%;
+ position:relative;
+ background-color:white;
+ margin:auto 8px;
+ display: block;
+ border-radius:8px;
+ transition: all 0.4s ease;
+}
+.item_categorie:hover{
+transform: scale(1.01);
+z-index:10;
+box-shadow:2px 2px 2px white,-1px -1px 2px white;
+}
+
