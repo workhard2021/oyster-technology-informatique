@@ -1,5 +1,5 @@
 export const NosValeur=({data}:any)=>{
-        return (<div className="relative w-full mb-32 md:w-[80%] p-6 m-auto top-[0px] md:top-[100px]">
+        return (<div className="relative w-full mb-32 md:w-[80%] p-6 m-auto">
             <div className="w-full m-auto flex justify-between items-start space-y-2 flex-wrap">
                   <div className='md:w-[45%] w-full'>
                        <h1 className='w-full text-3xl font-bold py-4 text-blue-900 '>{data.title}</h1>

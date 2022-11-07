@@ -6,11 +6,11 @@ import {FaTeamspeak} from 'react-icons/fa';
 
 
 export const About=({data,list_mission}:any)=>{
-    return (<div className="relative w-full mb-32 md:w-[80%] py-4 m-auto top-[100px]">
+    return (<div className="relative w-full mb-32 md:w-[80%] p-6 m-auto">
          {/* first block */}
          <div className="flex flex-wrap justify-between">
            <div className="md:w-[45%] w-full">
-                <h1 className="text-3xl text-blue-900  font-bold">{data.first_title}</h1>
+                <h1 className="text-3xl text-blue-900 font-bold">{data.first_title}</h1>
                 <p className="text-sm text-gray-800 py-4">{data.first_description}</p>
             </div>
            <div className="md:w-[45%] w-full">
