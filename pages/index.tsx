@@ -1,11 +1,8 @@
 import { CarouselScroll } from '../components/carousel-menu'
-import { CloudLogo } from '../components/cloud-logo'
 import { Articles } from '../components/item-articles'
 import { ItemOffres } from '../components/item-offre'
-import { ItemsContacts } from '../components/ItemsContacts'
 import { LogoSection } from '../components/logo'
 import { ReseauAndContact } from '../components/reseaux-contact'
-import { ScrollCloud } from '../components/scrollCloud'
 import { Teams } from '../components/teams'
 import { HEADER_MENU } from '../constants/headers-menu'
 import { Container } from '../containers/container'
@@ -24,6 +21,5 @@ export default function Home() {
            <CarouselScroll data={EXPERTISES_FIRST} target_id='carousel-scroll'/>
            <CarouselScroll order={'md:order-1 md-0'} data={EXPERTISES_TWO} target_id='carousel-scroll-2'/>
            <Teams/>
-           <ScrollCloud/>
   </Container>)
 }
