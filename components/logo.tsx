@@ -13,7 +13,7 @@ LogoSection.defaultProps={
      data:{
          sub_title:'Conseil en stratégie et management',
          title:'Execution First',
-         description:"Maestis est un cabinet indépendant de conseil en stratégie qui accompagne ses clients dans leur dynamique de création de valeur et de performance.",
+         description:"Oyster technology est un cabinet indépendant de conseil en stratégie qui accompagne ses clients dans leur dynamique de création de valeur et de performance.",
          image:'../images/2.jpeg'
      }
 }
