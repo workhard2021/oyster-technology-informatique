@@ -6,12 +6,12 @@ type propsItemOffre={
      offres:{icone:string|'',text:string}[],
 }
 export const ItemOffres=({data}:any)=>{
-    return (<div className="relative w-full py-2">
-              <div className="w-full text-center text-4xl py-4">Notre offre de services</div>
+    return (<div className="relative w-full py-4">
+              <div className="w-full text-center md:text-4xl text-2xl text-blue-900 py-4">Notre offre de services</div>
                <div className="w-full flex justify-center items-center flex-wrap">
                  {data && data.map((value:any,index:number)=>
                   <div key={index} className="relative md:w-[40%] w-full  bg-white shadow-xl shadow-gray-300 xl:h-[400px] md:h-[500px] h-[450px] m-4">
-                          <div className="w-full bg-[#122480] px-8 py-7 text-white">
+                          <div className="w-full bg-blue-900 px-8 py-7 text-white">
                                <div className="text-md font-extralight">{value.sub_title}</div>
                                <div className="text-2xl font-semibold">{value.title}</div>
                           </div>

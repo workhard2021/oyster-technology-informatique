@@ -1,5 +1,5 @@
-import { CloudLogo } from "../components/cloud-logo"
 import { ItemsContacts } from "../components/ItemsContacts"
+import { ScrollCloud } from "../components/scrollCloud"
 import { Footer } from "./footer"
 import { Seo } from "./Seo"
 
@@ -13,7 +13,7 @@ export const Container=({children,title}:propsConaitner)=>{
         <div className="w-full">
             {children}
             <ItemsContacts/>
-            <CloudLogo/>  
+            <ScrollCloud/>
             <Footer/>
         </div>
     </>)
