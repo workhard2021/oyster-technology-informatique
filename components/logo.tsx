@@ -2,7 +2,7 @@ export const LogoSection=({data}:any)=>{
     return (<div className="w-full z-0 relative mb-4">
            <div className="w-full md:h-[600px] h-[300px] bg-url" style={{backgroundImage:`url(${data.image})`}}>
                 <div className="relative md:top-[140px] top-[100px]">
-                    <div className="text-center uppercase text-gray-100 md:text-2xl text-xl py-4 font-bold text-title-shadow">{data.sub_title}</div>
+                    <div className="text-center uppercase text-white md:text-2xl text-xl py-4 font-bold text-title-shadow">{data.sub_title}</div>
                     <div className="text-center text-white md:text-5xl text-3xl font-bold text-title-shadow">{data.title}</div>
                 </div>
            </div>
