@@ -14,7 +14,6 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
     if(context.params!==undefined){
        slug=context.params.slug;
     }
-
     const arrayData=[
         {   slug:'telecom',
             image:'../images/1.jpeg',

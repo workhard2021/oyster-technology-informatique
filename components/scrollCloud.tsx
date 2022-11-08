@@ -8,7 +8,7 @@ export const ScrollCloud = ({data,title,sub_title}:any) => {
         if(el){
             el.scrollBy({
               top:0,
-              left:250,
+              left:240,
               behavior: 'smooth'
            });
         }
@@ -19,7 +19,7 @@ export const ScrollCloud = ({data,title,sub_title}:any) => {
         if(el){
             el.scrollBy({
                 top:0,
-               left:-250,
+               left:-240,
                behavior: 'smooth'
             });
         }
@@ -30,11 +30,7 @@ export const ScrollCloud = ({data,title,sub_title}:any) => {
         <div className="w-full text-center md:text-4xl text-3xl  font-bold py-2">{title}</div>
         <div className="md:w-[50%] text-sm w-full text-center text-gray-500 m-auto p-4">{sub_title}</div>
         <div className="relative py-4 m-auto">
-        <div className="absolute md:left-[15%] left-[0%] top-1/2 md:w-[70%] w-[100%] flex z-20  h-0 rounded-md justify-between items-center">
-            <button onClick={(e) => prevImage(e)} className="p-1 px-3 rounded-md outline-none relative text-xl"><BiChevronLeft className="inline" size={40}/></button>
-            <button onClick={(e) => nextImage(e)} className="p-1 px-3 rounded-md outline-none relative text-xl"><BiChevronRight className="inline" size={40}/></button>
-        </div>
-        <div className="md:w-[65%] w-[95%] m-auto">
+        <div className="md:w-[65%] w-[98%] m-auto">
             <div id='scroll-partener' className="container-carousel-scroll">
                 {data && data.map((value:any, index:any) => {
                  return <div key={index} className='item-partener p-3'>
@@ -42,6 +38,10 @@ export const ScrollCloud = ({data,title,sub_title}:any) => {
                   </div>
                })}
             </div>
+        </div>
+        <div className="relative w-[150px] py-4 m-auto flex z-20  h-0 rounded-md justify-between items-center">
+            <button onClick={(e) => prevImage(e)} className="p-1 px-2 rounded-md outline-none relative text-xl"><BiChevronLeft className="inline" size={40}/></button>
+            <button onClick={(e) => nextImage(e)} className="p-1 px-2 rounded-md outline-none relative text-xl"><BiChevronRight className="inline" size={40}/></button>
         </div>
     </div>
  </div>)
