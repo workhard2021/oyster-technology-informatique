@@ -12,8 +12,8 @@ export const Container=({children,title}:propsConaitner)=>{
         <Seo/>
         <div className="w-full">
             {children}
-            <ItemsContacts/>
             <ScrollCloud/>
+            <ItemsContacts/>
             <Footer/>
         </div>
     </>)

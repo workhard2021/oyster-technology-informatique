@@ -1,10 +1,11 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { Fragment, useState } from "react"
+import { Fragment, useEffect, useState } from "react"
 import {BiChevronRight} from 'react-icons/bi';
 
 export const HeaderDesktop=({data,logo}:any)=>{
     const route=useRouter();
+    const [path,setPath]=useState('');
     const [currentImage,setCurrentImage]=useState('../images/1.jpeg');
      const changeImage=(e:any,currentImage:string)=>{
         e.preventDefault();
@@ -19,8 +20,8 @@ export const HeaderDesktop=({data,logo}:any)=>{
       <div className="md:w-[70%] xl:w-[70%] w-full flex justify-center items-center">
         {data && data.map((value:any,index:number)=>{
            return <Fragment key={index}>
-               <div  className="menu inline-block text-gray-900 hover:text-gray-700 text-md h-auto xl:mx-6 mx-2 uppercase">
-               {value.url!=='/'?<Link className="whitespace-nowrap"  href={value.url}>{value.title}</Link>
+               <div  className="menu-remove menu inline-block text-gray-900 hover:text-gray-700 text-md h-auto xl:mx-6 mx-2 uppercase">
+               {value.url!=='/'?<Link className="whitespace-nowrap" href={value.url}>{value.title}</Link>
                :
                  <span className="whitespace-nowrap cursor-pointer" onMouseEnter={(e)=>changeImage(e,value.sous_menu[0]?.image)}>{value.title}</span>
                }
@@ -29,7 +30,7 @@ export const HeaderDesktop=({data,logo}:any)=>{
                       <div className="w-[50%] h-full flex flex-col p-12">
                        <div className="text-gray-500 font-thin py-2">{value.sub_title}</div>
                         {value.sous_menu && value.sous_menu.map((val:any,key:number)=>
-                          val.url!==''?<div key={key} className="my-1 text-[16px] uppercase flex justify-between" onClick={()=>route.push(val.url)}>
+                          val.url!==''?<div key={key} className="my-1 text-[16px] uppercase flex justify-between font-bold text-blue-900" onClick={()=>route.push(val.url)}>
                               <span id='' onMouseEnter={(e)=>changeImage(e,val.image||'')} className="cursor-pointer hover:text-red-500">{val.title}</span>
                               <span className="btn_navigation"><BiChevronRight className="text-red-400" size={25}/></span>
                          </div>

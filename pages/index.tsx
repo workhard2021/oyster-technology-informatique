@@ -1,4 +1,5 @@
 import { CarouselScroll } from '../components/carousel-menu'
+import { ItemFactory } from '../components/item-factory'
 import { ItemOffres } from '../components/item-offre'
 import { LogoSection } from '../components/logo'
 import { HEADER_MENU } from '../constants/headers-menu'
@@ -14,5 +15,6 @@ export default function Home() {
            <ItemOffres/>
            <CarouselScroll data={EXPERTISES_FIRST} title="Nos expertises" target_id='carousel-scroll'/>
            <CarouselScroll order={'md:order-1 md-0'} data={EXPERTISES_TWO} target_id='carousel-scroll-2'/>
+           <ItemFactory/>
   </Container>)
 }

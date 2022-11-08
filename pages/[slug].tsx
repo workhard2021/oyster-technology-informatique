@@ -2,7 +2,15 @@ import { Content } from "../components/content";
 import { Container } from "../containers/container";
 import {GetServerSideProps } from 'next'
 import { Header } from "../containers/header";
-export default function Article({data}:any){
+import { FastoryContainer } from "../components/item-factory";
+export default function Article({data,metier,slug}:any){
+    const METIER:string[]=['digital-factory','conseil','digital-transformation'];
+    if(METIER.includes(slug)){
+        return (<Container title={''}>
+             <Header/>
+             <FastoryContainer image={data.image} metier={metier} data={data.data} data_2={data.data_2} title={data.title} title_2={data.title_2} name={data.name}/>
+       </Container>)
+    }
     return (<Container title={''}>
              <Header/>
              <Content data={data}/>
@@ -93,16 +101,96 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
                 {title:'Définir les trajectoires de carrière ',description:'Définir une organisation offrant une grande autonomie aux équipes de delivery et capitaliser sur la technologie pour accélérer le développement et l’évolution des solution'}
             ]
         },
+    ];
+    const METIER=[
+           {
+            title:'Nos équipes mettent en place des environnements et des méthodes de fabrication logicielle qui optimisent l’efficacité opérationnelle en mode Agile :',
+            image:'../images/p2.jpeg',
+            sub_title:'Valider une intuition, créer de la confiance autour d’une idée en imaginant et en développant des scénarios pertinents, simples et créatifs.',
+            name:'Digital fastory',
+            slug:'digital-factory',
+            data:[
+                {id:1,title:'équipe pluridisciplinaire'},
+                {id:2,title:'consultants certifiés'},
+                {id:3,title:'organisation en Feature Teams'},
+                {id:4,title:'mise en place de l’Agilité'},
+                {id:5,title:'respect du Time to Market'},
+                {id:6,title:'recherche de la Qualité'}, 
+            ],
+            title_2:'Nous vous proposons un accompagnement et des préconisations sur les dernières stacks techniques les plus adaptées à vos objectifs de transformation digitale',
+            data_2:[
+                {id:1,title:'compatibilité des environnements'},
+                {id:2,title:'disponibilité des ressources'},
+                {id:3,title:'technologies évolutives'},
+                {id:4,title:'performance'},
+                {id:5,title:'orientées utilisateur final'},
+                {id:6,title:'communautaires'}, 
+            ]
+        },
+        {
+            title:'L’expérience montre qu’il n’existe pas un, mais plusieurs pilotages possibles pour mener à bien sa transformation digitale. Nos équipes vous accompagneront dans l’identification des facteurs clés permettant de mettre en place un dispositif unique, propre aux spécificités de votre entreprise',
+            image:'../images/p3.jpeg',
+            sub_title:'Vous accompagner dans l’identification des facteurs clés permettant de mettre en place un dispositif unique de transformation digitale.',
+            name:'Digital Trasformation',
+            slug:'digital-transformation',
+            data:[
+                {id:1,title:'bien connaître son organisation'},
+                {id:2,title:'appréhender les ressources disponibles'},
+                {id:3,title:'paralléliser les chantiers'},
+                {id:4,title:'partager les expériences acquises'},
+                {id:5,title:'instaurer un cercle vertueux de progrès'},
+                {id:6,title:'temporiser ses phases d’apprentissages'},
+                {id:6,title:'entraîner les équipes vers la vision souhaitée'},
+                {id:6,title:'choisir ses indicateurs de performances'},
+                 
+            ],
+            // title_2:'Nous vous proposons un accompagnement et des préconisations sur les dernières stacks techniques les plus adaptées à vos objectifs de transformation digitale',
+            // data_2:[
+            //     {id:1,title:'compatibilité des environnements'},
+            //     {id:2,title:'disponibilité des ressources'},
+            //     {id:3,title:'technologies évolutives'},
+            //     {id:4,title:'performance'},
+            //     {id:5,title:'orientées utilisateur final'},
+            //     {id:6,title:'communautaires'}, 
+            // ]
+        },  
+        {
+            title:'Nos équipes mettent en place des environnements et des méthodes de fabrication logicielle qui optimisent l’efficacité opérationnelle en mode Agile :',
+            image:'../images/p4.jpeg',
+            sub_title:'Valider une intuition, créer de la confiance autour d’une idée en imaginant et en développant des scénarios pertinents, simples et créatifs.',
+            name:'Conseil',
+            slug:'conseil',
+            data:[
+                {id:1,title:'équipe pluridisciplinaire'},
+                {id:2,title:'consultants certifiés'},
+                {id:3,title:'organisation en Feature Teams'},
+                {id:4,title:'mise en place de l’Agilité'},
+                {id:5,title:'respect du Time to Market'},
+                {id:6,title:'recherche de la Qualité'}, 
+            ],
+            title_2:'Nous vous proposons un accompagnement et des préconisations sur les dernières stacks techniques les plus adaptées à vos objectifs de transformation digitale',
+            data_2:[
+                {id:1,title:'compatibilité des environnements'},
+                {id:2,title:'disponibilité des ressources'},
+                {id:3,title:'technologies évolutives'},
+                {id:4,title:'performance'},
+                {id:5,title:'orientées utilisateur final'},
+                {id:6,title:'communautaires'}, 
+            ]
+        }   
     ]
-     let data:any=arrayData.find((value)=>value.slug===slug);
-     data=data?data:null;
-     if(!data){
+    let data:any=METIER.find(value=>value.slug===slug);
+    if(!data){
+        data=arrayData.find(value=>value.slug===slug);
+    }
+    data=data?data:null;
+    if(!data){
         return {
             notFound: true,
         }
-     }
+    }
     return {
-        props: {data}
-      }
+        props: {data,metier:METIER,slug}
+    }
   }
 

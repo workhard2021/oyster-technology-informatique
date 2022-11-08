@@ -16,7 +16,7 @@ export const HEADER_MENU=[
        sous_menu:[
          {url:'/conseil',title:'Conseil',image:'../images/3.jpeg'},
          {url:'/digital-factory',title:'Digital Factory',image:'../images/4.jpeg',},
-         {url:'/',title:'Digital Transformation',image:'../images/3.jpeg',},
+         {url:'/digital-transformation',title:'Digital Transformation',image:'../images/3.jpeg',},
        ]},
        {url:'/',title:'nous rejoindre',sub_title:'',
           sous_menu:[

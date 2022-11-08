@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export const ItemsContacts=({data}:any)=>{
-    return (<div className="w-full relative bg-[#122480] flex justify-center items-center flex-wrap py-2">
+    return (<div className="w-full relative bg-blue-900 flex justify-center items-center flex-wrap py-2">
           <div className='bg-url_teams  absolute w-full h-full' style={{backgroundImage:`url(${data.image})`}}/>
           <div className="relative px-4 md:w-[40%] w-full md:h-[500px] h-[300px] flex justify-center items-center">
               <div className="md:w-[80%] w-full m-auto">
