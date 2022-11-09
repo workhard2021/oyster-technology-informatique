@@ -28,7 +28,7 @@ export const ItemFactory=({data,title}:any)=>{
 }
 
 export const FactoryContainer=({metier,data,title,title_2,data_2,image,name}:any)=>{
-    return(<div className="w-full md:w-[80%] m-auto py-4 my-[65px]">
+    return(<div className="w-full xl:w-[70%] md:w-[90%] m-auto p-6 my-[65px]">
             <h2  className="auto text-center w-full text-[#231942] mb-[65px]">{name}</h2>
             <div className="w-full flex justify-between flex-wrap">
                <div className="md:w-[50%] w-full">

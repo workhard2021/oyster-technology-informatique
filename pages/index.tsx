@@ -1,5 +1,4 @@
 import { CarouselScroll } from '../components/carousel-menu'
-import { ItemFactory } from '../components/item-factory'
 import { ItemOffres } from '../components/item-offre'
 import { LogoSection } from '../components/logo'
 import { HEADER_MENU } from '../constants/headers-menu'
@@ -12,9 +11,10 @@ export default function Home() {
   return (<Container title={''}>
            <Header/>
            <LogoSection/>
+           <div className='xl:w-[80%] w-full md:w-full m-auto'>
            <ItemOffres/>
-           <CarouselScroll data={EXPERTISES_TWO} title="Nos expertises" target_id='carousel-scroll'/>
-           <CarouselScroll order={'md:order-1 md-0'} data={EXPERTISES_FIRST} target_id='carousel-scroll-2'/>
-           <ItemFactory/>
+              <CarouselScroll data={EXPERTISES_TWO} title="Nos expertises" target_id='carousel-scroll'/>
+              <CarouselScroll order={'md:order-1 md-0'} data={EXPERTISES_FIRST} target_id='carousel-scroll-2'/>
+           </div>
   </Container>)
 }

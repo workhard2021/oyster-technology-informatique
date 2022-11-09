@@ -1,9 +1,9 @@
 export const Content=({data}:any)=>{
-    return (<div className="relative w-full m-auto mb-16">
-        <div className="relative w-full md:h-[400px] h-[350px] flex justify-end m-auto">
+    return (<div className="relative w-full m-auto mb-16 ">
+      <div className="relative w-full md:h-[400px] h-[350px] flex justify-end m-auto">
             <div className="absolute z-0 top-0 left-0 w-full h-full bg-url" style={{backgroundImage:`url(${data.image})`}}/>
-        </div>
-      <div className="relative w-full md:w-[90%] m-auto">
+      </div>
+      <div className="relative w-full xl:w-[70%] md:w-[90%] m-auto">
         <div className="relative md:w-[40%] w-[90%] md:bottom-24 bottom-16 md:h-[200px] h-[150px] rounded-sm bg-blue-900 shadow-md mx-auto z-10 flex justify-center items-center">
                 <div className="w-full ">
                     <p className="w-full text-[24px] text-center text-white py-4 first-letter:capitalize">{data.title}</p>
@@ -34,7 +34,7 @@ export const Content=({data}:any)=>{
               {data.list_title_3}
             </p>
         </div>
-        <div className="p-6 w-[95%] md:w-[90%] shadow-2xl bg-white md:m-auto my-4 m-auto flex justify-center items-stretch flex-wrap">
+        <div className="p-16 md:w-full w-[90%] shadow-2xl bg-white md:m-auto my-4 m-auto flex justify-center items-stretch flex-wrap">
             <div className="m-auto w-full md:w-[70%]">
               <p className="w-full md:text-[35px] text-[22px] font-bold text-center text-[#231942]">Notre champ d’intervention</p>
               <p className="m-auto py-6 w-full md:w-[80%] md:text-[24px] text-[18px] text-[#983098] font-bold text-center">{data.title_description_2}</p>

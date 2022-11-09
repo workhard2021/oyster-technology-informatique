@@ -8,7 +8,7 @@ import {SiYoutubestudio} from 'react-icons/si';
 export const Contact=({data}:any)=>{
      return (<div className="w-full my-8 h-auto z-0 bg-white flex justify-center flex-wrap">
          {/* form and social network */}
-         <div className="w-full h-aut p-4 flex justify-center flex-wrap">
+         <div className="w-full h-aut p-4 flex justify-center flex-wrap xl:w-[70%] md:w-[90%] m-auto">
              <form className="md:w-[45%] w-full md:my-16 my-8">
                  <div className="mb-3 w-full flex justify-between flex-wrap">
                    <div className="w-[45%] my-2 flex justify-center flex-wrap">

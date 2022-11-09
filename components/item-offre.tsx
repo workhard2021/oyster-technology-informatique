@@ -7,7 +7,7 @@ type propsItemOffre={
      offres:{icone:string|'',text:string}[],
 }
 export const ItemOffres=({data,presentation}:any)=>{
-    return (<div className="relative w-full p-2 mb-[65px]">
+    return (<div className="relative w-full m-auto p-2 mb-[65px]">
                 <div className='relative w-full mb-[35px] flex justify-between flex-wrap'>
                   <div className='xl:w-[30%] xl:px-[50px] px-5 my-[20px]  px-auto w-full'>
                        <p className='w-full'>{presentation.title}</p>
