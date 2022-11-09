@@ -45,7 +45,7 @@ export const ItemOffres=({data,presentation}:any)=>{
 
 ItemOffres.defaultProps={
       presentation:{title:'Fondé en 2016, Maestis mobilise aujourd’hui plus de 60 consultants, aux compétences pluridisciplinaires, pour accompagner ses clients dans la réflexion stratégique et pour définir une méthode d’exécution pilotée par la valeur.',
-          slug:'/adn',
+          slug:'/notre-adn',
           name:'Notre mission',
           sub_title:'Faire émerger des solutions qui font consensus, parce qu’elles sont exécutables et de les déployer de la manière la plus efficiente possible.',
       },

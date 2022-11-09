@@ -6,7 +6,7 @@ import {FaTeamspeak} from 'react-icons/fa';
 
 
 export const About=({data,list_mission}:any)=>{
-    return (<div className="relative w-full mb-32 md:w-[80%] p-6 m-auto md:my-[65px] my-[30px]">
+    return (<div className="relative w-full mb-30 md:w-[70%] p-6 m-auto md:my-[65px] my-[30px]">
          {/* first block */}
          <div className="flex flex-wrap justify-between">
            <div className="md:w-[45%] w-full">
