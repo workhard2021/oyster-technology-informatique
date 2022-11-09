@@ -13,7 +13,7 @@ export const ItemOffres=({data,presentation}:any)=>{
                        <p className='w-full'>{presentation.title}</p>
                   </div>
                   <div className='xl:w-[30%] xl:px-[50px] px-5 my-[20px] px-auto text-center w-full'>
-                     <Link href={presentation.slug} className='inline font-bold m-auto w-[100px] px-6 text-center py-2 rounded-2xl bg-[#231942] text-white'>Je découvre</Link>
+                     <Link href={presentation.slug} className='inline font-bold m-auto w-[100px] px-6 text-center py-2 rounded-2xl bg-[#231942] text-white uppercase'>Je découvre</Link>
                   </div>
                   <div className='xl:w-[30%] xl:px-[50px] px-5 my-[20px] px-auto w-full'>
                        <h3 className='text-[#231942] pb-[15px] font-fontWeightBig'>{presentation.name}</h3>
