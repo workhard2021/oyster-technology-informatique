@@ -12,9 +12,9 @@ export default function Home() {
            <Header/>
            <LogoSection/>
            <div className='xl:w-[80%] w-full md:w-full m-auto'>
-           <ItemOffres/>
-              <CarouselScroll data={EXPERTISES_TWO} title="Nos expertises" target_id='carousel-scroll'/>
-              <CarouselScroll order={'md:order-1 md-0'} data={EXPERTISES_FIRST} target_id='carousel-scroll-2'/>
+             <ItemOffres/>
+             <CarouselScroll data={EXPERTISES_TWO} title="Nos expertises" target_id='carousel-scroll'/>
+             <CarouselScroll order={'md:order-1 md-0'} data={EXPERTISES_FIRST} target_id='carousel-scroll-2'/>
            </div>
   </Container>)
 }

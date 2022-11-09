@@ -13,8 +13,7 @@ export default function Article({data,metier,slug}:any){
     }
     return (<Container title={''}>
              <Header/>
-            <Content data={data}/>
-          
+             <Content data={data}/>
     </Container>)
 }
 

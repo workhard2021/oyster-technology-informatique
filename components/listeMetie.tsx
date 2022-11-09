@@ -1,11 +1,11 @@
 import Link from "next/link"
 
 export const ListMetier=({data}:any)=>{
-    return (<div className="relative m-auto py-8 px-4">
+    return (<div className="w-full  relative m-auto py-8 px-4">
           <div className="w-full py-2 text-center">
               <h2 className="text-[#231942] py-4">NOS MÉTIERS</h2>
           </div>
-          <div className="flex justify-center items-center flex-wrap">
+          <div className="w-full flex justify-center items-center flex-wrap">
             {data && data.map((value:any,index:number)=>{
              return <Link href={`/${value.slug}`} key={index} className="hover_scale_nos_idee  md:w-[300px] w-full bg-white border-2 border-gray-900  md:h-[440px] block shadow-md m-4">
                     <div className="md:h-[200px] h-[180px] w-full bg-url" style={{backgroundImage:`url(${value.image})`}} />

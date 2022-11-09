@@ -8,7 +8,7 @@ export const ItemFactory=({data,title}:any)=>{
                      <div className=" absolute w-[15px] h-[15px] m-auto rounded-full bg-green-500">
                      </div>
                 </div>
-                 <div className="z-10 relative flex flex-wrap md:w-[75%] w-[90%] m-auto p-5 py-8 my-0 bg-white rounded-md shadow-xl">
+                 <div className="z-10 relative flex flex-wrap md:w-[75%] w-[95%] m-auto p-5 py-8 my-0 bg-white rounded-md shadow-xl">
                      {data && data.map((value:any, index:number)=>{
                          return <div key={index}  className="w-full h-auto p-2">
                                 <div className="w-full leading-snug flex">
@@ -28,7 +28,7 @@ export const ItemFactory=({data,title}:any)=>{
 }
 
 export const FactoryContainer=({metier,data,title,title_2,data_2,image,name}:any)=>{
-    return(<div className="w-full xl:w-[70%] md:w-[90%] m-auto p-6 my-[65px]">
+    return(<div className="w-full xl:w-[80%] md:w-[90%] m-auto md:p-6 my-[65px]">
             <h2  className="auto text-center w-full text-[#231942] mb-[65px]">{name}</h2>
             <div className="w-full flex justify-between flex-wrap">
                <div className="md:w-[50%] w-full">
