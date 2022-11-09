@@ -27,7 +27,7 @@ export const ItemOffres=({data,presentation}:any)=>{
                           <div className="w-full bg-[#122480] px-8 py-8">
                                 <p className="text-white  md:text-[16px] text-[15px]">{value.sub_title}</p>
                                 <h3 className="text-white md:text-[25px] text-[20px]">{value.title}</h3>
-                                <div className='absolute top-[2%] md:top-[4%] right-8 md:w-[120px] md:h-[120px] w-[60px] h-[60px] bg-url' style={{backgroundImage:`url(${'../images/1.jpeg'})`}}/>
+                                <div className='absolute top-[2%] md:block hidden md:top-[4%] right-8 md:w-[120px] md:h-[120px] w-[60px] h-[60px] bg-url' style={{backgroundImage:`url(${'../images/1.jpeg'})`}}/>
                           </div>
                           <div className='w-full py-9'>
                             {value.offres && value.offres.map((val:any,index:number)=>
