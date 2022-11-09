@@ -6,7 +6,15 @@ module.exports = {
     "./containers/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+        fontWeight:{'fontWeightBig':600,
+             'fontWeightSmall':300
+        },
+        text:{
+           lg:'35px',
+           sm:'16px'
+        },
+    },
   },
   plugins: [],
 }

@@ -2,13 +2,13 @@ import { Content } from "../components/content";
 import { Container } from "../containers/container";
 import {GetServerSideProps } from 'next'
 import { Header } from "../containers/header";
-import { FastoryContainer } from "../components/item-factory";
+import { FactoryContainer } from "../components/item-factory";
 export default function Article({data,metier,slug}:any){
     const METIER:string[]=['digital-factory','conseil','digital-transformation'];
     if(METIER.includes(slug)){
         return (<Container title={''}>
              <Header/>
-             <FastoryContainer image={data.image} metier={metier} data={data.data} data_2={data.data_2} title={data.title} title_2={data.title_2} name={data.name}/>
+             <FactoryContainer image={data.image} metier={metier} data={data.data} data_2={data.data_2} title={data.title} title_2={data.title_2} name={data.name}/>
        </Container>)
     }
     return (<Container title={''}>

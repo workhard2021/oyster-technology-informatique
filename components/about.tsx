@@ -6,12 +6,12 @@ import {FaTeamspeak} from 'react-icons/fa';
 
 
 export const About=({data,list_mission}:any)=>{
-    return (<div className="relative w-full mb-32 md:w-[80%] p-6 m-auto">
+    return (<div className="relative w-full mb-32 md:w-[80%] p-6 m-auto md:my-[65px] my-[30px]">
          {/* first block */}
          <div className="flex flex-wrap justify-between">
            <div className="md:w-[45%] w-full">
                 <h1 className="text-3xl text-blue-900 font-bold">{data.first_title}</h1>
-                <p className="text-sm text-gray-800 py-4">{data.first_description}</p>
+                <p className="text-md text-gray-800 py-4">{data.first_description}</p>
             </div>
            <div className="md:w-[45%] w-full">
                <div className="w-full rounded-md h-[320px] bg-url" style={{backgroundImage:`url(${data.first_image})`}} />
@@ -28,7 +28,7 @@ export const About=({data,list_mission}:any)=>{
                        </div>
                   </div>
                   <div className='text-2xl text-blue-900  py-3 font-bold first-letter:capitalize mt-4'>{data.two_title}</div>
-                  <div className='text-sm text-gray-800 py-4'>{data.two_sub_title}</div>
+                  <div className='text-md text-gray-800 py-4'>{data.two_sub_title}</div>
              </div>
              <div className="w-full px-1">
                   <div className="relative">
@@ -38,7 +38,7 @@ export const About=({data,list_mission}:any)=>{
                        </div>
                   </div>
                   <div className='text-2xl text-blue-900  font-bold py-3 first-letter:capitalize mt-4'>{data.tree_title}</div>
-                  <div className='text-sm text-gray-800 py-4'>{data.tree_sub_title}</div>
+                  <div className='text-md text-gray-800 py-4'>{data.tree_sub_title}</div>
              </div>
              <div className="w-full px-1">
                   <div className="relative">
@@ -48,15 +48,15 @@ export const About=({data,list_mission}:any)=>{
                        </div>
                   </div>
                   <div className='text-2xl text-blue-900 font-bold py-3 first-letter:capitalize mt-4'>{data.four_title}</div>
-                  <div className='text-sm text-gray-800 py-4'>{data.four_sub_title}</div>
+                  <div className='text-md text-gray-800 py-4'>{data.four_sub_title}</div>
              </div>
          </div>
          {/* tree block */}
          <div className="relative w-full flex md:flex-nowrap flex-wrap justify-between items-stretch py-16">
              <div className='md:w-[45%] w-full'>
                 <div className='text-3xl text-blue-900  font-bold first-letter:capitalize'>{data.block_tree_title}</div>
-                <p className='text-sm text-gray-800 py-4'>{data.block_tree_description}</p>
-                <p className='text-sm text-gray-800 py-4'>{data.block_tree_description}</p>
+                <p className='text-md text-gray-800 py-4'>{data.block_tree_description}</p>
+                <p className='text-md text-gray-800 py-4'>{data.block_tree_description}</p>
              </div>
              <div className='relative md:w-[45%] w-full'>
                   {list_mission && list_mission.map((value:any,key:number)=>{
@@ -71,7 +71,7 @@ export const About=({data,list_mission}:any)=>{
                                      }
                                      <div className='text-xl text-blue-900  first-letter:capitalize'>{value.title}</div>
                                  </div>
-                                 <div className='text-sm text-gray-800 py-4'>{value.description}</div>
+                                 <div className='text-md text-gray-800 py-4'>{value.description}</div>
                      </div>)
                   })
                   }

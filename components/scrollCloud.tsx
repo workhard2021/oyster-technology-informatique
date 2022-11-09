@@ -25,10 +25,10 @@ export const ScrollCloud = ({data,title,sub_title}:any) => {
         }
     }
     if(data && data.length===0) return null;
-    return (<div className="w-full p-4 bg-gray-200">
+    return (<div className="w-full p-4">
          <div id="partenaire"></div>
-        <div className="w-full text-center md:text-4xl text-3xl text-blue-900 font-bold py-2">{title}</div>
-        <div className="md:w-[50%] text-sm w-full text-center text-gray-500 m-auto p-4">{sub_title}</div>
+        <h2 className="w-full text-center text-[#122480] mb-[35px] m-auto">{title}</h2>
+        <div className="md:w-[50%] w-full text-center m-auto mb-[10px]">{sub_title}</div>
         <div className="relative py-4 m-auto">
         <div className="md:w-[65%] w-[98%] m-auto">
             <div id='scroll-partener' className="container-carousel-scroll">

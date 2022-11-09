@@ -3,14 +3,14 @@ import { Fragment } from "react"
 import {BsTwitter,BsLinkedin,BsFacebook} from 'react-icons/bs';
 
 export const Footer=({newtwork,right,page}:any)=>{
-    return (<footer className="w-full p-4 text-white bg-blue-900">
+    return (<footer className="w-full p-4 text-white bg-[#122480]">
         <div className="w-full flex justify-evenly flex-wrap">
            <div className="md:w-[40%] w-full flex md:justify-around items-center md:my-auto my-3">
                {page && page.map((value:any,key:number)=>
                  <Link className="first-letter:capitalize m-auto" key={key} href={value.url}>{value.title}</Link>
                )}
            </div>
-           <div className="md:w-[25%] md:order-3 order-0 w-full flex md:justify-end justify-center md:my-auto my-3 items-center space-x-5">
+           {/* <div className="md:w-[25%] md:order-3 order-0 w-full flex md:justify-end justify-center md:my-auto my-3 items-center space-x-5">
              {newtwork && newtwork.map((value:any,key:number)=>{
                                      return <Fragment key={key}>
                                          {value.name==='twitter'?
@@ -25,7 +25,7 @@ export const Footer=({newtwork,right,page}:any)=>{
                                            }
                                      </Fragment>
                                   })}
-           </div>
+           </div> */}
            <div className="md:w-[25%] w-full md:-order-1 order-0 md:text-end text-center md:my-auto my-3">
                <p className="text-sm first-letter:capitalize">{right}</p>
            </div>

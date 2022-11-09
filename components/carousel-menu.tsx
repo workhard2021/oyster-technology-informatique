@@ -27,27 +27,29 @@ export const CarouselScroll = ({data,title,order='',target_id='carousel-scroll'}
         });
     }
     if(data && data.length===0) return null;
-    return (<div className='w-full relative'>
-        {title &&<p className='py-8 font-medium md:text-4xl text-2xl text-center first-letter:capitalize text-blue-900'>{title || ''}</p>}
+    return (<div className='w-full relative mb-[65px]'>
+      {title &&<h2 className='mb-[65px] text-center first-letter:capitalize text-[#231942]'>{title || ''}</h2>}
       <div className="relative w-full">
         <div className='bg-url_teams absolute w-full h-full' style={{backgroundImage:`url(${'../images/4.jpeg'})`}}/>
-        <div className="absolute top-1/2 w-full flex z-10 pt-0 h-0 rounded-md justify-between items-center">
-            <button onClick={(e) => prevImage(e)} className="md:text-2xl  py-2 rounded-md outline-none relative text-gray-400"><BiChevronLeft size={100}/></button>
-            <button onClick={(e) => nextImage(e)} className="md:text-2xl  py-2 rounded-md outline-none relative text-gray-400 text-xl"><BiChevronRight size={100}/></button>
+        <div className="absolute top-1/2 w-full flex z-10 -translate-y-10 h-0 rounded-md">
+           <div className=' w-[100%] m-auto flex justify-between'>
+              <button onClick={(e) => prevImage(e)} className="py-2 relative text-[#545454]"><BiChevronLeft className='inline-block' size={60}/></button>
+              <button onClick={(e) => nextImage(e)} className="py-2 relative text-[#545454] text-xl"><BiChevronRight className='inline-block' size={60}/></button>
+           </div>
         </div>
-        <div id={target_id} className='flex justify-start items-center overflow-hidden m-auto md:h-[300px] xl:h-[350px] h-[300px] relative'>
-            {data && data.map((value:any, index:number) => {
-                return <Link href={value.url} id="size-position" key={index} className='relative min-w-[100%] h-full flex justify-between items-center'>
-                    <div className='relative h-full md:w-[80%] w-[90%] m-auto border-x-[1px] border-gray-700 bg-white'>
-                       <div  className="relative w-full h-full flex justify-center items-center flex-wrap">
-                         <div className={`${order} md:h-full h-[50%] md:w-[50%] w-full  bg-url`} style={{backgroundImage:`url(${value.image})`}}/>
-                         <div className='w-full md:h-auto h-[50%] md:w-[50%] text-center'>
-                              <div className='text-2xl first-letter:capitalize w-full font-thin py-3 text-gray-900'>{value.expertise}</div>
-                             <div className='w-full first-letter:capitalize text-3xl font-bold text-blue-900'>{value.title}</div> 
+        <div id={target_id} className='flex justify-start items-center overflow-hidden m-auto md:h-[400px] h-[320px] relative'>
+            {data && data.map((value:any,index:number) => {
+                return <div id="size-position" key={index} className='border-b-[1px] border-x-[1px] border-gray-200 relative min-w-[100%] h-full flex justify-between items-center'>
+                    <div className='relative h-full md:w-[90%] w-[78%] m-auto bg-white'>
+                       <div className="relative w-full h-full flex justify-center items-center flex-wrap">
+                         <Link href={value.url} className={`${order} md:h-full h-[50%] md:w-[50%] w-full bg-url`} style={{backgroundImage:`url(${value.image})`}}></Link>
+                         <div className={`w-full md:h-auto h-[50%] m-auto md:w-[50%] p-[5%]`}>
+                                 <span className='md:text-[20px] text-[16px] inline-block md:mb-[15px] mb-[8px] uppercase text-[#545454]'>{value.expertise}</span>
+                                 <h3 className='first-letter:capitalize md:text-[45px] text-[30px] text-[#231942]'>{value.title}</h3> 
                          </div>
                        </div>
                     </div>
-                </Link>
+                </div>
             })}
         </div>
     </div>

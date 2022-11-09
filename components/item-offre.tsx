@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import {BiChevronRight} from 'react-icons/bi';
 
 type propsItemOffre={
@@ -5,22 +6,35 @@ type propsItemOffre={
      sub_title:string,
      offres:{icone:string|'',text:string}[],
 }
-export const ItemOffres=({data}:any)=>{
-    return (<div className="relative w-full py-4">
-              <div className="w-full text-center md:text-4xl text-2xl text-blue-900 py-4">Notre offre de services</div>
-               <div className="w-full flex justify-center items-center flex-wrap">
+export const ItemOffres=({data,presentation}:any)=>{
+    return (<div className="relative w-full p-2 mb-[65px]">
+                <div className='relative w-full mb-[35px] flex justify-between flex-wrap'>
+                  <div className='xl:w-[30%] xl:px-[50px] px-5 my-[20px]  px-auto w-full'>
+                       <p className='w-full'>{presentation.title}</p>
+                  </div>
+                  <div className='xl:w-[30%] xl:px-[50px] px-5 my-[20px] px-auto text-center w-full'>
+                     <Link href={presentation.slug} className='inline font-bold m-auto w-[100px] px-6 text-center py-2 rounded-2xl bg-[#231942] text-white'>Je découvre</Link>
+                  </div>
+                  <div className='xl:w-[30%] xl:px-[50px] px-5 my-[20px] px-auto w-full'>
+                       <h3 className='text-[#231942] pb-[15px] font-fontWeightBig'>{presentation.name}</h3>
+                       <p >{presentation.sub_title}</p>
+                  </div>
+              </div>
+               <h2 className="w-full text-center mb-[65px] font-fontWeightBig">Notre offre de services</h2>
+               <div className="w-full flex justify-center items-start flex-wrap">
                  {data && data.map((value:any,index:number)=>
-                  <div key={index} className="relative md:w-[40%] w-full  bg-white shadow-xl shadow-gray-300 xl:h-[400px] md:h-[500px] h-[450px] m-4">
-                          <div className="w-full bg-blue-900 px-8 py-7 text-white">
-                               <div className="text-md font-extralight">{value.sub_title}</div>
-                               <div className="text-2xl font-semibold">{value.title}</div>
+                  <div key={index} className="relative md:w-[45%] w-full bg-white shadow-xl shadow-gray-300 md:h-[450px] h-auto pb-8 m-4">
+                          <div className="w-full bg-[#122480] px-8 py-8">
+                                <p className="text-white  md:text-[16px] text-[15px]">{value.sub_title}</p>
+                                <h3 className="text-white md:text-[25px] text-[20px]">{value.title}</h3>
+                                <div className='absolute top-[2%] md:top-[4%] right-8 md:w-[120px] md:h-[120px] w-[90px] h-[90px] bg-url' style={{backgroundImage:`url(${'../images/1.jpeg'})`}}/>
                           </div>
-                          <div className='w-full py-8'>
+                          <div className='w-full py-9'>
                             {value.offres && value.offres.map((val:any,index:number)=>
-                               <div key={index} className="w-full py-1 px-6 font-light text-gray-800">
-                                   <BiChevronRight size={20} className="inline text-gray-700 font-bold"/>
+                               <p key={index} className="w-full py-2 px-6 font-[400]">
+                                   <BiChevronRight size={20} className="inline"/>
                                    <span className='px-2'>{val.text}</span>
-                               </div>
+                               </p>
                             )}
                           </div>
                      </div>
@@ -30,6 +44,11 @@ export const ItemOffres=({data}:any)=>{
 }
 
 ItemOffres.defaultProps={
+      presentation:{title:'Fondé en 2016, Maestis mobilise aujourd’hui plus de 60 consultants, aux compétences pluridisciplinaires, pour accompagner ses clients dans la réflexion stratégique et pour définir une méthode d’exécution pilotée par la valeur.',
+          slug:'/adn',
+          name:'Notre mission',
+          sub_title:'Faire émerger des solutions qui font consensus, parce qu’elles sont exécutables et de les déployer de la manière la plus efficiente possible.',
+      },
      data:[
         {title:'Conseil',
          sub_title:'Nos champs d’intervention',
@@ -53,21 +72,22 @@ ItemOffres.defaultProps={
             {icon:'',text:'Gestion de la Data'},
          ]
         },
-        { title:'Coaching d’organisation',
-          sub_title:'Nos champs d’intervention',
-          offres:[
-            {icon:'',text:'Agilité stratégique, opérationnelle et technologique (transition agilité à l’échelle)'},
-            {icon:'',text:'Coaching d’équipes (build / operate / transfer, autonomisation)'},
-            {icon:'',text:'Innovation managériale'}
-          ]
-        },
-        { title:'Coaching d’organisation',
-          sub_title:'Nos champs d’intervention',
-          offres:[
-            {icon:'',text:'Marque employeur'},
-            {icon:'',text:'Académie de formation'},
-            {icon:'',text:'Talent management (programme manager, obsession client, filières métiers, parcours experts, hauts potentiels, soft skills…)'}
-          ]
-        },
+        
+        // { title:'Coaching d’organisation',
+        //   sub_title:'Nos champs d’intervention',
+        //   offres:[
+        //     {icon:'',text:'Agilité stratégique, opérationnelle et technologique (transition agilité à l’échelle)'},
+        //     {icon:'',text:'Coaching d’équipes (build / operate / transfer, autonomisation)'},
+        //     {icon:'',text:'Innovation managériale'}
+        //   ]
+        // },
+        // { title:'Coaching d’organisation',
+        //   sub_title:'Nos champs d’intervention',
+        //   offres:[
+        //     {icon:'',text:'Marque employeur'},
+        //     {icon:'',text:'Académie de formation'},
+        //     {icon:'',text:'Talent management (programme manager, obsession client, filières métiers, parcours experts, hauts potentiels, soft skills…)'}
+        //   ]
+        // },
      ]
 }

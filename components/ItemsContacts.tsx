@@ -1,17 +1,17 @@
 import Link from "next/link";
 
 export const ItemsContacts=({data}:any)=>{
-    return (<div className="w-full relative bg-blue-900 flex justify-center items-center flex-wrap py-2">
-          <div className='bg-url_teams  absolute w-full h-full' style={{backgroundImage:`url(${data.image})`}}/>
-          <div className="relative px-4 md:w-[40%] w-full md:h-[500px] h-[300px] flex justify-center items-center">
-              <div className="md:w-[80%] w-full m-auto">
-                  <p className="w-full md:text-start text-center text-white">{data.title}</p>
-                  <p className="w-full md:text-start text-center text-white  py-6 text-md md:text-2xl">{data.sub_title}</p>
-                  <p className="w-full md:text-start text-center text-white">{data.title_question}</p>
+    return (<div className="w-full relative bg-blue-900 flex justify-center items-center flex-wrap my-[30px]">
+          <div className='bg-url_teams absolute w-full h-full' style={{backgroundImage:`url(${data.image})`}}/>
+          <div className="relative md:w-[45%] w-full md:h-[500px] h-[300px] flex justify-evenly items-center">
+              <div className="w-full m-auto">
+                  <p className="w-full md:text-start uppercase text-center text-white">{data.title}</p>
+                  <h2 className="w-full md:text-start text-center text-white text-[30px] py-[25px]" style={{fontWeight:'600'}}>{data.sub_title}</h2>
+                  <p className="w-full md:text-start text-center text-white text-[24px]" style={{fontWeight:'300'}}>{data.title_question}</p>
               </div>
           </div>
-          <div className="relative md:w-[40%] w-full md:h-[500px] h-[50px] flex justify-center items-center">
-              <Link className="py-2 px-3 bg-white rounded-md" href={`mailto:${data.email}`}>{data.email_title}</Link>
+          <div className="relative md:w-[45%] w-full md:h-[500px] h-[50px] flex justify-center items-center">
+              <Link style={{fontWeight:'600'}} className="py-2 px-4 uppercase bg-white rounded-xl font-light" href={`mailto:${data.email}`}>{data.email_title}</Link>
           </div>
     </div>)
 }
