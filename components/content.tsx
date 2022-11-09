@@ -21,7 +21,7 @@ export const Content=({data}:any)=>{
                <p className="text-[16px] font-extrabold w-full mb-1">
                  {data.list_title_4} 
                </p>
-               <div className="w-full pl-16">
+               <div className="w-full md:pl-16 pl-8">
                  {data.list_description.map((value:any,key:number)=>{
                     return (<li className="text-[16px]"  key={key}>
                            <span className="pr-1 font-extrabold">{value.title} </span>
@@ -34,7 +34,7 @@ export const Content=({data}:any)=>{
               {data.list_title_3}
             </p>
         </div>
-        <div className="p-16 md:w-full w-[90%] shadow-2xl bg-white md:m-auto my-4 m-auto flex justify-center items-stretch flex-wrap">
+        <div className="md:p-16 p-8 md:w-full w-[90%] shadow-2xl bg-white md:m-auto my-4 m-auto flex justify-center items-stretch flex-wrap">
             <div className="m-auto w-full md:w-[70%]">
               <p className="w-full md:text-[35px] text-[22px] font-bold text-center text-[#231942]">Notre champ d’intervention</p>
               <p className="m-auto py-6 w-full md:w-[80%] md:text-[24px] text-[18px] text-[#983098] font-bold text-center">{data.title_description_2}</p>
