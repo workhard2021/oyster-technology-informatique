@@ -1,17 +1,14 @@
 import { ItemsContacts } from "../components/ItemsContacts"
 import { ScrollCloud } from "../components/scrollCloud"
 import { Footer } from "./footer"
-import { Seo } from "./Seo"
 type propsConaitner={
       children:JSX.Element|JSX.Element[],
+      width:string|null,
 }
-export const Container=({children}:propsConaitner)=>{
-    return (<><Seo/>
-        <div className={`w-full m-auto`}>
+export const Wrapper=({children,width="w-full xl:w-[85%]"}:propsConaitner)=>{
+    return (<>
+        <div className={`m-auto ${width}`}>
             {children}
-            <ItemsContacts/>
-            <ScrollCloud/>
-            <Footer/>
         </div>
     </>)
 }

@@ -1,33 +1,36 @@
 import Link from 'next/link';
+import { useEffect, useState } from 'react';
 import {BiChevronRight} from 'react-icons/bi';
 
-type propsItemOffre={
-     title:string,
-     sub_title:string,
-     offres:{icone:string|'',text:string}[],
-}
-export const ItemOffres=({data,presentation}:any)=>{
-    return (<div className="relative w-full m-auto p-2 mb-[65px]">
-                <div className='relative w-full mb-[35px] flex justify-between flex-wrap'>
-                  <div className='xl:w-[30%] xl:px-[50px] px-5 my-[20px]  px-auto w-full'>
-                       <p className='w-full'>{presentation.title}</p>
-                  </div>
-                  <div className='xl:w-[30%] xl:px-[50px] px-5 my-[20px] px-auto text-center w-full'>
-                     <Link href={presentation.slug} className='inline font-bold m-auto w-[100px] px-6 text-center py-2 rounded-2xl bg-[#231942] text-white uppercase'>Je découvre</Link>
-                  </div>
-                  <div className='xl:w-[30%] xl:px-[50px] px-5 my-[20px] px-auto w-full'>
-                       <h3 className='text-[#231942] pb-[15px] font-fontWeightBig'>{presentation.name}</h3>
-                       <p >{presentation.sub_title}</p>
-                  </div>
-              </div>
-               <h2 className="w-full text-center mb-[65px] font-fontWeightBig">Notre offre de services</h2>
-               <div className="w-full flex justify-center items-start flex-wrap">
+export const ItemOffres=({data}:any)=>{
+  const [scroll,setScroll]=useState(0);
+  useEffect(()=>{
+      const el=document.getElementsByClassName('visible-transition');
+      let a:number=0;
+      if(window){
+        window.addEventListener('scroll',function(){
+            a= window.pageYOffset;
+            setScroll(a);
+        });
+      }
+      if(el){
+          for(let e of el){
+             if(e.offsetTop<=scroll){
+                  e.style.opacity="1";
+                  e.style.transition="opacity 0.8s ease-in-out";
+             }
+          }
+      }
+  },[scroll]);
+  return (<div className="relative w-full m-auto p-2 mb-[65px]">
+               <h2 className="relative w-full text-center mb-[65px] font-fontWeightBig opacity-0 visible-transition">Notre offre de services</h2>
+               <div className="relative w-full flex justify-center items-start flex-wrap">
                  {data && data.map((value:any,index:number)=>
-                  <div key={index} className="relative md:w-[45%] w-full bg-white shadow-xl shadow-gray-300 md:h-[450px] h-auto pb-8 m-4">
+                  <div key={index} className="relative md:w-[45%] w-full bg-white shadow-xl shadow-gray-300 pb-8 m-4 opacity-0 md:h-[450px] h-auto visible-transition">
                           <div className="w-full bg-[#122480] px-8 py-8">
                                 <p className="text-white  md:text-[16px] text-[15px]">{value.sub_title}</p>
                                 <h3 className="text-white md:text-[25px] text-[20px]">{value.title}</h3>
-                                <div className='absolute top-[2%] md:block hidden md:top-[4%] right-8 md:w-[120px] md:h-[120px] w-[60px] h-[60px] bg-url' style={{backgroundImage:`url(${'../images/1.jpeg'})`}}/>
+                                <div className='absolute top-[2%] md:block md:top-[4%] right-8 md:w-[120px] md:h-[120px] w-[60px] h-[60px] bg-url rounded-full' style={{backgroundImage:`url(${value.image})`}}/>
                           </div>
                           <div className='w-full py-9'>
                             {value.offres && value.offres.map((val:any,index:number)=>
@@ -44,14 +47,10 @@ export const ItemOffres=({data,presentation}:any)=>{
 }
 
 ItemOffres.defaultProps={
-      presentation:{title:'Fondé en 2016, Maestis mobilise aujourd’hui plus de 60 consultants, aux compétences pluridisciplinaires, pour accompagner ses clients dans la réflexion stratégique et pour définir une méthode d’exécution pilotée par la valeur.',
-          slug:'/notre-adn',
-          name:'Notre mission',
-          sub_title:'Faire émerger des solutions qui font consensus, parce qu’elles sont exécutables et de les déployer de la manière la plus efficiente possible.',
-      },
      data:[
         {title:'Conseil',
          sub_title:'Nos champs d’intervention',
+         image:'../images/conseil.webp',
          offres:[
             {icon:'',text:'Raison d’être, vision et roadmap'},
             {icon:'',text:'Nouvelles offres et expériences client / collaborateur'},
@@ -64,6 +63,7 @@ ItemOffres.defaultProps={
         },
         { title:'Direction de programme',
           sub_title:'Nos champs d’intervention',
+          image:'../images/direction-programme.webp',
           offres:[
             {icon:'',text:'Cadrage stratégique, rationalisation des investissement'},
             {icon:'',text:'Pilotage valeur / effort des transformations business to IT'},

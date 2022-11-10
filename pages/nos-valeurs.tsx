@@ -1,9 +1,14 @@
 import { Container } from "../containers/container";
 import { Header } from "../containers/header";
 import { NosValeur } from "../components/nos-valeur";
+import { Wrapper } from "../containers/wrapper";
 export default function NosValeurPage(){
-    return (<Container title={''}>
-                <Header/>
+    return (<>
+            <Header/> 
+            <Container>
+               <Wrapper>
                 <NosValeur/>
-    </Container>)
+              </Wrapper>
+          </Container> 
+      </>)
 }

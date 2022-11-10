@@ -6,21 +6,21 @@ import {FaTeamspeak} from 'react-icons/fa';
 
 
 export const About=({data,list_mission}:any)=>{
-    return (<div className="relative w-full mb-30 md:w-[70%] p-6 m-auto md:my-[65px] my-[30px]">
+    return (<div className="relative w-full mb-30 p-6 m-auto md:my-[65px] my-[30px]">
          {/* first block */}
          <div className="flex flex-wrap justify-between">
            <div className="md:w-[45%] w-full">
                 <h1 className="text-3xl text-blue-900 font-bold">{data.first_title}</h1>
                 <p className="text-md text-gray-800 py-4">{data.first_description}</p>
             </div>
-           <div className="md:w-[45%] w-full">
+            <div className="md:w-[45%] w-full">
                <div className="w-full rounded-md h-[320px] bg-url" style={{backgroundImage:`url(${data.first_image})`}} />
-           </div>
+            </div>
          </div>
          {/* two block */}
-         <div className="relative w-full flex md:flex-nowrap flex-wrap justify-between items-center py-16">
-            <div className="absolute md:block hidden top-[27%] left-5 w-full h-[1px] bg-gray-400"></div>
-             <div className="w-full px-1">
+         <div className="relative w-full mt-[30px] flex md:flex-nowrap flex-wrap justify-between items-center py-16 space-x-2">
+            <div className="absolute md:block hidden top-[16%] left-5 w-full h-[1px] bg-gray-400"></div>
+             <div className="w-full px-1 h-auto md:h-[400px]">
                   <div className="relative">
                        {/* <div className="absolute top-[50%] left-5 w-full h-[1px] bg-gray-400"></div> */}
                        <div className='relative flex z-10 w-[45px] h-[45px] rounded-full  bg-blue-900 '>
@@ -28,9 +28,9 @@ export const About=({data,list_mission}:any)=>{
                        </div>
                   </div>
                   <div className='text-2xl text-blue-900  py-3 font-bold first-letter:capitalize mt-4'>{data.two_title}</div>
-                  <div className='text-md text-gray-800 py-4'>{data.two_sub_title}</div>
+                  <div className='text-md text-gray-800 py-4 text-justify'>{data.two_sub_title}</div>
              </div>
-             <div className="w-full px-1">
+             <div className="w-full px-1 h-auto md:h-[400px]">
                   <div className="relative">
                        {/* <div className="absolute top-[50%] left-2 w-[98%] h-[1px] bg-gray-400"></div> */}
                        <div className='relative flex z-10 w-[45px] h-[45px] rounded-full  bg-blue-900 '>
@@ -38,9 +38,9 @@ export const About=({data,list_mission}:any)=>{
                        </div>
                   </div>
                   <div className='text-2xl text-blue-900  font-bold py-3 first-letter:capitalize mt-4'>{data.tree_title}</div>
-                  <div className='text-md text-gray-800 py-4'>{data.tree_sub_title}</div>
+                  <div className='text-md text-gray-800 py-4 text-justify'>{data.tree_sub_title}</div>
              </div>
-             <div className="w-full px-1">
+             <div className="w-full px-1 h-auto md:h-[400px]">
                   <div className="relative">
                        {/* <div className="absolute top-[50%] left-2 w-[98%] h-[1px] bg-gray-400"></div> */}
                        <div className='relative flex z-10 w-[45px] h-[45px] rounded-full  bg-blue-900 '>
@@ -48,7 +48,7 @@ export const About=({data,list_mission}:any)=>{
                        </div>
                   </div>
                   <div className='text-2xl text-blue-900 font-bold py-3 first-letter:capitalize mt-4'>{data.four_title}</div>
-                  <div className='text-md text-gray-800 py-4'>{data.four_sub_title}</div>
+                  <div className='text-md text-gray-800 py-4 text-justify'>{data.four_sub_title}</div>
              </div>
          </div>
          {/* tree block */}
@@ -82,11 +82,11 @@ export const About=({data,list_mission}:any)=>{
 }
 About.defaultProps={
     data:{
-     first_title:'Les deux hommes entourent David et le conduisent à la voiture',
-     first_description:'Les deux hommes entourent David et le conduisent à la voiture, un Espace, garé devant sa maison. Il se dit que ce serait bien si sa voisine pouvait le voir comme ça, entouré de deux gardes du corps. Ça fait ‘pro’. Et comme tous les matins, sa voisine Florence le regarde partir, mais cette fois-ci entouré de deux gros gars baraqués, rasés au plus près, menton et crâne. Un peu plus les pieds sur terre et surtout plus réveillée, elle ne trouve pas cette scène très drôle. Il faudra qu’elle vienne le voir ce soir, à son retour, pour lui demander de quoi il s’agissait',
+     first_title:'NOTRE ADN',
+     first_description:"Animés par la conviction que le conseil ne se résume pas au consulting, ni à la consultation, nous accompagnons nos clients dans la recherche et la mise en œuvre de solutions exécutables, car consensuelles.",
      first_image:'../images/about.jpeg',
      two_title:'Founded',
-     two_sub_title:'La route commença à s’enfoncer. On ne voyait plus les grillages sur les cotés, mais juste des rochers. Et soudain, les voitures s’arrêtèrent devant une énorme porte en métal entourée de béton.',
+     two_sub_title:"A sa création à Paris en 1999, Degetel était une petite agence web à fort focus technologique. Depuis lors, sa forte croissance, entièrement d’origine organique, l’a transformé en groupe fédérant plus de 600 personnes réparties sur 3 pays et 7 implantations. Ayant pleinement atteint l'objectif stratégique qu'il s'était fixé, Degetel a décidé, au début de l'année 2020, d'apporter une nouvelle impulsion à son développement d'activités en rejoignant le Groupe Technology & Strategy",
      tree_title:'50M montly enrichments',
      tree_sub_title:'La route commença à s’enfoncer. On ne voyait plus les grillages sur les cotés, mais juste des rochers. Et soudain, les voitures s’arrêtèrent devant une énorme porte en métal entourée de béton.',
      four_title:'4K users',
@@ -96,16 +96,20 @@ About.defaultProps={
     },
     list_mission:[{
           id:1,
-          title:'teams',
-          description:'La route commença à s’enfoncer. On ne voyait plus les grillages sur les cotés, mais juste des rochers. Et soudain, les voitures s’arrêtèrent devant une énorme porte en métal entourée de béton'
+          title:'Expertise',
+          description:'Insuffler le changement par l’enthousiasme, l’écoute et le consensus'
         },
         {   id:2,
-            title:'board',
-            description:'La route commença à s’enfoncer. On ne voyait plus les grillages sur les cotés, mais juste des rochers. Et soudain, les voitures s’arrêtèrent devant une énorme porte en métal entourée de béton'
+            title:'Approche mission',
+            description:'Accompagner la réflexion stratégique et définir conjointement une approche pilotée par la valeur'
         },
         {   id:3,
-            title:'press',
-            description:'La route commença à s’enfoncer. On ne voyait plus les grillages sur les cotés, mais juste des rochers. Et soudain, les voitures s’arrêtèrent devant une énorme porte en métal entourée de béton'
+            title:'Collaboration',
+            description:'Rendre autonome en devenant un relais de connaissance et d’expertise, mobilisable à tout moment'
+        },
+        {   id:4,
+           title:'Place de l’humain',
+           description:'Animer un dispositif cohérent impliquant l’ensemble de l’environnement et des équipes'
         }
     ]
 }

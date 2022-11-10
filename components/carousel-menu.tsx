@@ -1,7 +1,9 @@
 import Link from 'next/link';
+import { useEffect, useState } from 'react';
 import { BiChevronLeft, BiChevronRight } from 'react-icons/bi';
 
 export const CarouselScroll = ({data,title,order='',target_id='carousel-scroll'}:any) => {
+    const [scroll,setScroll]=useState(0);
     const nextImage = (e:any) => {
         e.preventDefault();
         const el=document.getElementById(target_id);
@@ -14,6 +16,7 @@ export const CarouselScroll = ({data,title,order='',target_id='carousel-scroll'}
             behavior:'smooth'
         });
     }
+
     const prevImage = (e:any) => {
         e.preventDefault();
         const el = document.getElementById(target_id);
@@ -26,8 +29,28 @@ export const CarouselScroll = ({data,title,order='',target_id='carousel-scroll'}
             behavior: 'smooth'
         });
     }
+    
+    useEffect(()=>{
+      const el=document.getElementsByClassName('visible-transition-carousel');
+      let a:number=0;
+      if(window){
+        window.addEventListener('scroll',function(){
+            a= window.pageYOffset;
+            setScroll(a);
+        });
+      }
+      if(el){
+          for(let e of el){
+             if(e.offsetTop<=scroll+500){
+                  e.style.opacity="1";
+                  e.style.transition="opacity 0.8s ease-in-out";
+             }
+          }
+      }
+   },[scroll]);
+
     if(data && data.length===0) return null;
-    return (<div className='w-full relative mb-[65px]'>
+    return (<div className='w-full relative mb-[65px] opacity-0 visible-transition-carousel'>
       {title &&<h2 className='mb-[65px] text-center first-letter:capitalize text-[#231942]'>{title || ''}</h2>}
       <div className="relative w-full">
         <div className='bg-url_teams absolute w-full h-full' style={{backgroundImage:`url(${'../images/4.jpeg'})`}}/>
@@ -44,8 +67,8 @@ export const CarouselScroll = ({data,title,order='',target_id='carousel-scroll'}
                        <div className="relative w-full h-full flex justify-center items-center flex-wrap">
                          <Link href={value.url} className={`${order} md:h-full h-[50%] md:w-[50%] w-full bg-url`} style={{backgroundImage:`url(${value.image})`}}></Link>
                          <div className={`w-full md:h-auto h-[50%] m-auto md:w-[50%] p-[5%]`}>
-                                 <span className='md:text-[20px] text-[16px] inline-block md:mb-[15px] mb-[8px] uppercase text-[#545454]'>{value.expertise}</span>
-                                 <h3 className='first-letter:capitalize md:text-[45px] text-[30px] text-[#231942]'>{value.title}</h3> 
+                                <span className='md:text-[20px] text-[16px] inline-block md:mb-[15px] mb-[8px] uppercase text-[#545454]'>{value.expertise}</span>
+                                <h3 className='first-letter:capitalize md:text-[45px] text-[30px] text-[#231942]'>{value.title}</h3> 
                          </div>
                        </div>
                     </div>
