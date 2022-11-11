@@ -6,7 +6,7 @@ import {FaTeamspeak} from 'react-icons/fa';
 
 
 export const About=({data,list_mission}:any)=>{
-    return (<div className="relative w-full mb-30 p-6 m-auto md:my-[65px] my-[30px]">
+    return (<div className="relative w-full mb-30 md:p-6 p-auto m-auto md:my-[65px] my-[30px]">
          {/* first block */}
          <div className="flex flex-wrap justify-between">
            <div className="md:w-[45%] w-full">
@@ -18,7 +18,7 @@ export const About=({data,list_mission}:any)=>{
             </div>
          </div>
          {/* two block */}
-         <div className="relative w-full mt-[30px] flex md:flex-nowrap flex-wrap justify-between items-center py-16 space-x-2">
+         <div className="relative w-full mt-[30px] flex md:flex-nowrap flex-wrap justify-between items-center py-16 md:space-x-2 space-x-0">
             <div className="absolute md:block hidden top-[16%] left-5 w-full h-[1px] bg-gray-400"></div>
              <div className="w-full px-1 h-auto md:h-[400px]">
                   <div className="relative">
@@ -49,7 +49,7 @@ export const About=({data,list_mission}:any)=>{
              </div>
          </div>
          {/* tree block */}
-         <div className="relative w-full flex md:flex-nowrap flex-wrap justify-between items-stretch py-16">
+         <div className="relative w-full flex md:flex-nowrap flex-wrap justify-between items-stretch py-16 md:space-x-2 space-x-0">
              <div className='md:w-[45%] w-full'>
                 <div className='text-3xl text-blue-900 font-bold first-letter:capitalize'>{data.block_tree_title}</div>
                 <p className='text-md text-[#545454] py-4'>{data.block_tree_description}</p>
