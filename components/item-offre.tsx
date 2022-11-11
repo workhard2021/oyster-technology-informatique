@@ -5,7 +5,7 @@ import {BiChevronRight} from 'react-icons/bi';
 export const ItemOffres=({data}:any)=>{
   const [scroll,setScroll]=useState(0);
   useEffect(()=>{
-      const el=document.getElementsByClassName('visible-transition');
+      const el=document.getElementsByClassName('visible-transition') as HTMLCollectionOf<HTMLElement>;
       let a:number=0;
       if(window){
         window.addEventListener('scroll',function(){

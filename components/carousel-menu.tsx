@@ -29,22 +29,23 @@ export const CarouselScroll = ({data,title,order='',target_id='carousel-scroll'}
             behavior: 'smooth'
         });
     }
-    
+
     useEffect(()=>{
-      const el=document.getElementsByClassName('visible-transition-carousel');
-      let a:number=0;
+
+      const el=document.getElementsByClassName('visible-transition-carousel') as HTMLCollectionOf<HTMLElement>;
+      let val:number=0;
       if(window){
         window.addEventListener('scroll',function(){
-            a= window.pageYOffset;
-            setScroll(a);
+            val= window.pageYOffset;
+            setScroll(val);
         });
       }
       if(el){
           for(let e of el){
-             if(e.offsetTop<=scroll+500){
-                  e.style.opacity="1";
-                  e.style.transition="opacity 0.8s ease-in-out";
-             }
+                if(e.offsetTop<=scroll){
+                    e.style.opacity="1";
+                    e.style.transition="opacity 0.8s ease-in-out";
+                }
           }
       }
    },[scroll]);
