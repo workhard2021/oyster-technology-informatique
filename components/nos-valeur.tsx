@@ -1,11 +1,11 @@
 export const NosValeur=({data}:any)=>{
-        return (<div className="relative w-full mb-30 p-6 m-auto md:my-[65px] my-[30px]">
+        return (<div className="relative w-full m-auto py-[60px]">
             <div className="w-full m-auto flex justify-between items-start space-y-2 flex-wrap">
-                  <div className='md:w-[45%] w-full'>
+                  <div className='md:w-[50%] w-full'>
                        <h1 className='w-full text-3xl font-bold py-4 text-blue-900 '>{data.title}</h1>
-                       <p className='w-full text-gray-600'>{data.sub_title}</p>
+                       <p className='w-full text-[#545454]'>{data.sub_title}</p>
                   </div>
-                  <div className="md:w-[45%] w-full rounded-md h-[320px] bg-url" style={{backgroundImage:`url(${data.image})`}} />
+                  <div className="md:w-[50%] w-full rounded-md h-[320px] bg-url" style={{backgroundImage:`url(${data.image})`}} />
             </div>
             <div className="w-full m-auto flex justify-between items-center pt-16 mb-4 flex-wrap">
                  {data.nos_valeurs.map((value:any,index:number)=>{
@@ -14,17 +14,17 @@ export const NosValeur=({data}:any)=>{
                               <div className='bg-blue-900 rounded-full w-[30px] h-[30px] flex justify-center items-center'>
                                    <span className='text-md m-auto text-white'>{value.number}</span>
                               </div>
-                              <span className='text-md px-2 font-bold text-blue-900 '>{value.title}</span>
+                              <span className='text-md px-2 font-bold text-blue-900'>{value.title}</span>
                            </div>
-                           <p className='py-4 text-gray-600'>{value.description}</p>
+                           <p className='py-4 text-[#545454]'>{value.description}</p>
                     </div>)
                  })}
             </div>
             <div className='w-full m-auto flex justify-between items-start pt-4 md:pt-16 mb-4 space-y-2 flex-wrap'>
                   <div className="md:w-[45%] md:m-auto mb-4 w-full rounded-md h-[320px] bg-url" style={{backgroundImage:`url(${data.image_tree})`}} />
-                  <div className='w-full md:w-[45%]'>
+                  <div className='w-full md:w-[45%]'>+
                     <p className='text-xl font-bold text-blue-900 pb-3'>{data.title_tree}</p>
-                    <p className='text-gray-700'>{data.description_tree}</p>
+                    <p className='text-[#545454]'>{data.description_tree}</p>
                   </div>  
             </div>
   </div>)

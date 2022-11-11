@@ -1,14 +1,5 @@
-import { LISTCOUNTRY } from "../constants/list-country"
-
-export const CandidatureSpontanee=({listCountry,title,image,sub_title,paraph}:any)=>{
-     return (<div className="w-full h-auto z-0 bg-white flex justify-center flex-wrap">
-        <div className="w-full md:h-[450px] h-[300px] bg-url flex justify-center items-center" style={{backgroundImage:`url(${image})`}}>
-                <div className="relative m-auto">
-                    <h1 className="first-letter:capitalize text-center text-white md:text-6xl text-3xl font-bold">{title}</h1>
-                    <div className="first-letter:capitalize text-center text-gray-100 md:text-3xl text-xl py-4 font-bold">{sub_title}</div>
-                </div>
-         </div>
-         <div className="w-full p-4 md:w-[60%] m-auto px-4">
+export const CandidatureSpontanee=({listCountry,paraph}:any)=>{
+     return (<div className="w-full md:w-[60%] m-auto px-4">
             <div className="w-full px-auto md:my-16 my-8">
                 <h3 className="py-2 md:text-[20px] text-gray-500 w-full md:text-justify text-center">{paraph}</h3>
              </div>
@@ -64,14 +55,5 @@ export const CandidatureSpontanee=({listCountry,title,image,sub_title,paraph}:an
                     <button className="h-[45px] text-white w-full m-auto bg-[#122480] hover:bg-blue-800 rounded-md">Soumission</button>
                  </div>
              </form>
-         </div>
-     </div>)
-}
-
-CandidatureSpontanee.defaultProps={
-   listCountry:LISTCOUNTRY,
-   paraph:'Vous souhaitez nous rejoindre mais ne trouvez pas d’offre d’emploi correspondant à votre profil? Nous vous invitons à soumettre votre candidature spontanée',
-   title:'candidature',
-   sub_title:'spontanée',
-   image:'../images/candidature-spontanee.jpg'
+    </div>)
 }

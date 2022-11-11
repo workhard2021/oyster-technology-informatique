@@ -11,7 +11,7 @@ export const ItemsContacts=({data}:any)=>{
               </div>
           </div>
           <div className="relative md:w-[45%] w-full md:h-[500px] h-[50px] flex justify-center items-center">
-              <Link style={{fontWeight:'600'}} className="py-2 px-4 uppercase bg-white rounded-xl font-light" href={`mailto:${data.email}`}>{data.email_title}</Link>
+              <Link className="py-2 px-4 uppercase bg-white rounded-xl font-medium" href={`mailto:${data.email}`}>{data.email_title}</Link>
           </div>
     </div>)
 }

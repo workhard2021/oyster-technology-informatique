@@ -20,7 +20,7 @@ export const HeaderDesktop=({data,logo}:any)=>{
       <div className="md:w-[70%] xl:w-[70%] w-full flex justify-center items-center">
         {data && data.map((value:any,index:number)=>{
            return <Fragment key={index}>
-               <div  className="menu-remove menu inline-block text-gray-900 hover:text-gray-700 text-[18px] h-auto md:mx-[15px] mx-[15px] uppercase font-normal">
+               <div  className="menu-remove menu inline-block text-[#231942] hover:text-red-600 text-[18px] h-auto md:mx-[15px] mx-[15px] uppercase font-normal">
                {value.url!=='/'?<Link className="whitespace-nowrap" href={value.url}>{value.title}</Link>
                :
                  <span className="whitespace-nowrap hover:text-red-600 transition-all duration-75 cursor-pointer" onMouseEnter={(e)=>changeImage(e,value.sous_menu[0]?.image)}>{value.title}</span>
@@ -31,14 +31,14 @@ export const HeaderDesktop=({data,logo}:any)=>{
                       {value.sub_title?<div className="text-gray-500 font-thin py-3 mb-2">{value.sub_title}</div>:null}
                         {value.sous_menu && value.sous_menu.map((val:any,key:number)=>
                           val.url!==''?<div key={key} className="leading-8 font-normal uppercase flex justify-between text-[#231942]" onClick={()=>route.push(val.url)}>
-                              <span onMouseEnter={(e)=>changeImage(e,val.image||'')} className="cursor-pointer hover:text-red-500">{val.title}</span>
-                              <span className="btn_navigation"><BiChevronRight className="text-red-400" size={25}/></span> 
+                              <span onMouseEnter={(e)=>changeImage(e,val.image||'')} className="cursor-pointer hover:text-red-600">{val.title}</span>
+                              <span className="btn_navigation"><BiChevronRight className="text-red-600" size={25}/></span> 
                          </div>
                          :
                          //  ancres
                          <div key={key} className="my-1 text-[16px] cursor-pointer uppercase flex justify-between">
-                              <span  onMouseEnter={(e)=>changeImage(e,val.image||'')} className="cursor-pointer hover:text-red-500">{val.title}</span>
-                              <span className="btn_navigation"><BiChevronRight className="text-red-400" size={25}/></span>
+                              <span  onMouseEnter={(e)=>changeImage(e,val.image||'')} className="cursor-pointer hover:text-red-600">{val.title}</span>
+                              <span className="btn_navigation"><BiChevronRight className="text-red-600" size={25}/></span>
                          </div>
                         )}
                       </div>

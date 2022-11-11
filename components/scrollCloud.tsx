@@ -33,7 +33,7 @@ export const ScrollCloud = ({data,title,sub_title}:any) => {
         <div className="md:w-[65%] w-[98%] m-auto">
             <div id='scroll-partener' className="container-carousel-scroll">
                 {data && data.map((value:any, index:any) => {
-                 return <div key={index} className='item-partener p-3'>
+                 return <div key={index} className='item-partener p-3 mx-1'>
                     <div className="relative flex justify-center items-center w-full h-full bg-url" style={{backgroundImage:`url(${avatarFn(value.image)})`}} />
                   </div>
                })}

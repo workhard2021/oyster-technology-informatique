@@ -1,6 +1,7 @@
 import Link from "next/link"
 import { Fragment } from "react"
 import {BsTwitter,BsLinkedin,BsFacebook} from 'react-icons/bs';
+import { ScrollTop } from "../components/scrollTop";
 
 export const Footer=({newtwork,right,page}:any)=>{
     return (<footer className="w-full p-4 text-white bg-[#122480]">

@@ -3,11 +3,10 @@ import { ScrollCloud } from "../components/scrollCloud"
 import { Footer } from "./footer"
 type propsConaitner={
       children:JSX.Element|JSX.Element[],
-      width:string|null,
 }
-export const Wrapper=({children,width="w-full xl:w-[85%]"}:propsConaitner)=>{
+export const Wrapper=({children}:propsConaitner)=>{
     return (<>
-        <div className={`m-auto ${width}`}>
+        <div className={`w-full md:w-[85%] m-auto md:p-8 p-4`}>
             {children}
         </div>
     </>)

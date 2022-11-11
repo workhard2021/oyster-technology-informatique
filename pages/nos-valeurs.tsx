@@ -7,7 +7,7 @@ export default function NosValeurPage(){
             <Header/> 
             <Container>
                <Wrapper>
-                <NosValeur/>
+                 <NosValeur/>
               </Wrapper>
           </Container> 
       </>)

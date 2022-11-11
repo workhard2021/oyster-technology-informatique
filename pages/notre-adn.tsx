@@ -7,8 +7,8 @@ export default function AdnPage(){
               <Header/>
               <Container>
                 <Wrapper>
-                  <About/>
-                 </Wrapper>
+                   <About/>
+                </Wrapper>
               </Container>  
     </>)
 }

@@ -4,24 +4,27 @@ import {GetServerSideProps } from 'next'
 import { Header } from "../containers/header";
 import { FactoryContainer } from "../components/item-factory";
 import { Wrapper } from "../containers/wrapper";
+import { LogoSecteur } from "../components/logoSecteur";
 export default function Article({data,metier,slug}:any){
     const METIER:string[]=['digital-factory','digital-performance','conseil','digital-transformation'];
     if(METIER.includes(slug)){
         return (<>
             <Header/>
              <Container>
-               {/* <Wrapper> */}
+             <LogoSecteur sub_title={data.name} image={data.image} title={data.expertise}/>
+               <Wrapper>
                    <FactoryContainer image={data.icon} metier={metier} data={data.data} data_2={data.data_2} title={data.title} title_2={data.title_2} name={data.name}/>
-               {/* </Wrapper> */}
+               </Wrapper>
             </Container>
        </>)
     }
     return (<>
          <Header/>
              <Container>
-                 {/* <Wrapper> */}
-                 <Content data={data}/>
-                {/* </Wrapper> */}
+                 <LogoSecteur title={data.title} image={data.image} sub_title={data.sub_title}/>
+                 <Wrapper>
+                    <Content data={data}/>
+                </Wrapper>
          </Container>
     </>)
 }
@@ -93,6 +96,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
             sub_title:'Soyez accompagné sur les dernières stacks techniques les plus adaptées à vos objectifs de transformation digitale.',
             name:'Digital factory',
             slug:'digital-factory',
+            expertise:'EXPERTISES SECTORIELLES',
             data:[
                 {id:1,title:'équipe pluridisciplinaire'},
                 {id:2,title:'consultants certifiés'},
@@ -118,6 +122,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
             sub_title:'Vous accompagner dans l’identification des facteurs clés permettant de mettre en place un dispositif unique de transformation digitale.',
             name:'Digital Trasformation',
             slug:'digital-transformation',
+            expertise:'EXPERTISES SECTORIELLES',
             data:[
                 {id:1,title:'bien connaître son organisation'},
                 {id:2,title:'appréhender les ressources disponibles'},
@@ -136,6 +141,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
             sub_title:'Valider une intuition, créer de la confiance autour d’une idée en imaginant et en développant des scénarios pertinents, simples et créatifs.',
             name:'Conseil',
             slug:'conseil',
+            expertise:'EXPERTISES SECTORIELLES',
             data:[
                 {id:1,title:'équipe pluridisciplinaire'},
                 {id:2,title:'consultants certifiés'},
@@ -161,6 +167,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
             sub_title:'Valider une intuition, créer de la confiance autour d’une idée en imaginant et en développant des scénarios pertinents, simples et créatifs.',
             name:'Digital Performance',
             slug:'digital-performance',
+            expertise:'EXPERTISES SECTORIELLES',
             data:[
                 {id:1,title:'faire émerger la stratégie business'},
                 {id:2,title:'permettre à la DSI de jouer son rôle de conseil'},

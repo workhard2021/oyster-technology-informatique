@@ -1,5 +1,6 @@
 import { ItemsContacts } from "../components/ItemsContacts"
 import { ScrollCloud } from "../components/scrollCloud"
+import { ScrollTop } from "../components/scrollTop"
 import { Footer } from "./footer"
 import { Seo } from "./Seo"
 type propsConaitner={
@@ -7,11 +8,12 @@ type propsConaitner={
 }
 export const Container=({children}:propsConaitner)=>{
     return (<><Seo/>
-        <div className={`w-full m-auto`}>
+        <div className={`relative w-full m-auto`}>
             {children}
             <ItemsContacts/>
             <ScrollCloud/>
             <Footer/>
         </div>
+        <ScrollTop />
     </>)
 }

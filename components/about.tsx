@@ -11,7 +11,7 @@ export const About=({data,list_mission}:any)=>{
          <div className="flex flex-wrap justify-between">
            <div className="md:w-[45%] w-full">
                 <h1 className="text-3xl text-blue-900 font-bold">{data.first_title}</h1>
-                <p className="text-md text-gray-800 py-4">{data.first_description}</p>
+                <p className="text-md text-[#545454] py-4">{data.first_description}</p>
             </div>
             <div className="md:w-[45%] w-full">
                <div className="w-full rounded-md h-[320px] bg-url" style={{backgroundImage:`url(${data.first_image})`}} />
@@ -22,56 +22,53 @@ export const About=({data,list_mission}:any)=>{
             <div className="absolute md:block hidden top-[16%] left-5 w-full h-[1px] bg-gray-400"></div>
              <div className="w-full px-1 h-auto md:h-[400px]">
                   <div className="relative">
-                       {/* <div className="absolute top-[50%] left-5 w-full h-[1px] bg-gray-400"></div> */}
                        <div className='relative flex z-10 w-[45px] h-[45px] rounded-full  bg-blue-900 '>
-                          <BsFlagFill className='m-auto relative inline-block text-gray-300' size={20} />
+                          <BsFlagFill className='m-auto relative inline-block text-gray-200' size={20} />
                        </div>
                   </div>
                   <div className='text-2xl text-blue-900  py-3 font-bold first-letter:capitalize mt-4'>{data.two_title}</div>
-                  <div className='text-md text-gray-800 py-4 text-justify'>{data.two_sub_title}</div>
+                  <div className='text-md text-[#545454] py-4 text-justify'>{data.two_sub_title}</div>
              </div>
              <div className="w-full px-1 h-auto md:h-[400px]">
                   <div className="relative">
-                       {/* <div className="absolute top-[50%] left-2 w-[98%] h-[1px] bg-gray-400"></div> */}
                        <div className='relative flex z-10 w-[45px] h-[45px] rounded-full  bg-blue-900 '>
-                          <HiOutlineDocumentText className='m-auto relative inline-block text-gray-300' size={20} />
+                          <HiOutlineDocumentText className='m-auto relative inline-block text-gray-200' size={20} />
                        </div>
                   </div>
                   <div className='text-2xl text-blue-900  font-bold py-3 first-letter:capitalize mt-4'>{data.tree_title}</div>
-                  <div className='text-md text-gray-800 py-4 text-justify'>{data.tree_sub_title}</div>
+                  <div className='text-md text-[#545454] py-4 text-justify'>{data.tree_sub_title}</div>
              </div>
              <div className="w-full px-1 h-auto md:h-[400px]">
                   <div className="relative">
-                       {/* <div className="absolute top-[50%] left-2 w-[98%] h-[1px] bg-gray-400"></div> */}
-                       <div className='relative flex z-10 w-[45px] h-[45px] rounded-full  bg-blue-900 '>
-                          <FiUsers className='m-auto relative inline-block text-gray-300' size={20} />
+                       <div className='relative flex z-10 w-[45px] h-[45px] rounded-full bg-blue-900'>
+                          <FiUsers className='m-auto relative inline-block text-gray-200' size={20} />
                        </div>
                   </div>
                   <div className='text-2xl text-blue-900 font-bold py-3 first-letter:capitalize mt-4'>{data.four_title}</div>
-                  <div className='text-md text-gray-800 py-4 text-justify'>{data.four_sub_title}</div>
+                  <div className='text-md text-[#545454] py-4 text-justify'>{data.four_sub_title}</div>
              </div>
          </div>
          {/* tree block */}
          <div className="relative w-full flex md:flex-nowrap flex-wrap justify-between items-stretch py-16">
              <div className='md:w-[45%] w-full'>
-                <div className='text-3xl text-blue-900  font-bold first-letter:capitalize'>{data.block_tree_title}</div>
-                <p className='text-md text-gray-800 py-4'>{data.block_tree_description}</p>
-                <p className='text-md text-gray-800 py-4'>{data.block_tree_description}</p>
+                <div className='text-3xl text-blue-900 font-bold first-letter:capitalize'>{data.block_tree_title}</div>
+                <p className='text-md text-[#545454] py-4'>{data.block_tree_description}</p>
+                <p className='text-md text-[#545454] py-4'>{data.block_tree_description}</p>
              </div>
              <div className='relative md:w-[45%] w-full'>
                   {list_mission && list_mission.map((value:any,key:number)=>{
                      return (<div key={key} className='relative w-full bg-white shadow-md p-4 my-4'>
                                  <div className='w-full flex space-x-4'>
                                      {value.id===1? 
-                                        <FaTeamspeak className='inline text-blue-900 ' size={18}/>
+                                        <FaTeamspeak className='inline text-blue-900' size={18}/>
                                         :value.id===2? 
-                                           <FiUsers className='inline text-blue-900 ' size={18}/>:
-                                      value.id===3? <AiOutlineMail className='inline text-blue-900 ' size={18}/>
+                                           <FiUsers className='inline text-blue-900' size={18}/>:
+                                      value.id===3? <AiOutlineMail className='inline text-blue-900' size={18}/>
                                       :null
                                      }
-                                     <div className='text-xl text-blue-900  first-letter:capitalize'>{value.title}</div>
+                                     <div className='text-xl text-blue-900 first-letter:capitalize'>{value.title}</div>
                                  </div>
-                                 <div className='text-md text-gray-800 py-4'>{value.description}</div>
+                                 <div className='text-md text-[#545454] py-4'>{value.description}</div>
                      </div>)
                   })
                   }
