@@ -27,7 +27,7 @@ export const ScrollCloud = ({data,title,sub_title}:any) => {
     if(data && data.length===0) return null;
     return (<div className="w-full p-4">
          <div id="partenaire"></div>
-        <h2 className="w-full text-center text-[#122480] mb-[35px] text-[25px] md:text-[35px] m-auto">{title}</h2>
+        <h2 className="w-full text-center text-[#231942] mb-[35px] text-[35px] m-auto">{title}</h2>
         <div className="md:w-[50%] w-full text-center m-auto mb-[10px]">{sub_title}</div>
         <div className="relative py-4 m-auto">
         <div className="md:w-[65%] w-[98%] m-auto">
