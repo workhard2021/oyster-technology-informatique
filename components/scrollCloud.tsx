@@ -27,13 +27,13 @@ export const ScrollCloud = ({data,title,sub_title}:any) => {
     if(data && data.length===0) return null;
     return (<div className="w-full p-4">
          <div id="partenaire"></div>
-        <h2 className="w-full text-center text-[#231942] mb-[35px] text-[35px] m-auto">{title}</h2>
+        <h2 className="w-full text-center mb-[35px] text-[35px] m-auto">{title}</h2>
         <div className="md:w-[50%] w-full text-center m-auto mb-[10px]">{sub_title}</div>
         <div className="relative py-4 m-auto">
         <div className="md:w-[80%] bg-white m-auto flex justify-center items-center flex-wrap">
              {/* <div id='scroll-parteners' className="container-carousel-scrolls flex justify-center items-center flex-wrap"> */}
                 {data && data.map((value:any, index:any) => {
-                 return <div key={index} className='bg-white m-2 p-4 flex justify-center items-center md:w-[30%] w-[30%] h-[95px]'>
+                 return <div key={index} className='bg-white m-2 p-4 flex justify-center items-center md:w-[30%] md:h-[95px] w-[45%] h-[100px]'>
                     <div className="relative h-full w-full  bg-url-partenaire" style={{backgroundImage:`url(${avatarFn(value.image)})`}} />
                   </div>
                })}
