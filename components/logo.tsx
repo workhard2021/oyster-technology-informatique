@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useEffect} from "react"
 
 export const LogoSection=({data}:any)=>{
     useEffect(()=>{
@@ -20,8 +20,8 @@ export const LogoSection=({data}:any)=>{
                     <h1 style={{fontWeight:'600'}} className="text-center text-white md:text-[4vw] text-[30px] text-title-shadow">{data.title}</h1>
                 </div>
            </div>
-           <p style={{fontWeight:'600'}} className="mt-[65px] px-4 md:z-50 md:absolute md:bottom-24 md:left-16 relative bottom-0 left-0 md:py-0 leading-snug md:w-[30%] w-full text-[25px] md:text-[#d4cfcf] text-[#808080]">
-              <strong className="font-bold z-10">{data.description}</strong>
+           <p style={{fontWeight:'600'}} className="mt-[65px] px-4 md:absolute md:bottom-24 md:left-16 relative bottom-0 left-0 md:py-0 z-10 leading-snug md:w-[30%] w-full text-[25px] md:text-[#d4cfcf] text-[#808080]">
+              <strong className="font-bold ">{data.description}</strong>
            </p>
     </div>)
 }

@@ -8,13 +8,7 @@
   box-sizing: border-box;
   outline: none;
 }
-body{
-  /* background-position: center;
-  background-repeat:no-repeat;
-  background-size: cover;
-  filter:saturate(1.2);
-  background-image: url('../public/images/bg.jpg'); */
-}
+
 html{
   line-height: 1.15;
   scroll-behavior: smooth;
