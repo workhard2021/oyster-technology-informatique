@@ -33,8 +33,8 @@ export const ScrollCloud = ({data,title,sub_title}:any) => {
         <div className="relative py-4 m-auto md:w-[100%] w-full">
         <div className="relative md:w-[80%] w-full m-auto">
              <div className="absolute w-full top-[50%] h-0 m-auto flex z-20 rounded-md justify-between items-center">
-                <button onClick={(e) => prevImage(e)} className="p-1  rounded-md outline-none relative"><BiChevronLeft className="inline text-white" size={70}/></button>
-                <button onClick={(e) => nextImage(e)} className="p-1  rounded-md outline-none relative"><BiChevronRight className="inline text-white" size={70}/></button>
+                <button onClick={(e) => prevImage(e)} className="p-1 rounded-md outline-none relative"><BiChevronLeft className="inline text-gray-900" size={70}/></button>
+                <button onClick={(e) => nextImage(e)} className="p-1 rounded-md outline-none relative"><BiChevronRight className="inline text-gray-900" size={70}/></button>
              </div>
              <div id='scroll-partener' className="container-carousel-scroll">
                  {data && data.map((value:any, index:any) => {
