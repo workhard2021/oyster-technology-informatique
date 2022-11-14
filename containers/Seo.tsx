@@ -13,7 +13,7 @@ export function Seo({data=dataInit,defaultData}:any){
          <link rel="icon" href={defaultData.url_file}/>
          <link rel="apple-touch-icon" href={defaultData.url_file}/>
          <meta name="type" content={'site-web'}/>
-         <meta name="locale" content="fr_ml"/>
+         <meta name="locale" content="fr_md"/>
          <meta name="site_name" content="Oyster-technology"/>
          <meta name="image" content={data.url_file?avatarFn(`${data.url_file}`):defaultData.url_file}/>
          <meta name="keywords" content={keywords} />

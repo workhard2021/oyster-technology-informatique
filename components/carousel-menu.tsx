@@ -51,7 +51,7 @@ export const CarouselScroll = ({data,title,order='',target_id='carousel-scroll'}
    },[scroll]);
 
     if(data && data.length===0) return null;
-    return (<div className='w-full relative mb-[65px] opacity-0 visible-transition-carousel'>
+    return (<div className='w-full relative opacity-0 visible-transition-carousel'>
       {title &&<h2 className='mb-[65px] text-center first-letter:capitalize text-[#231942]'>{title || ''}</h2>}
       <div className="relative w-full">
         <div className='bg-url_teams absolute w-full h-full' style={{backgroundImage:`url(${'../images/4.jpeg'})`}}/>

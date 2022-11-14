@@ -65,6 +65,12 @@ body h1, body h2, body h3, body h4, body h5, body h6{
   background-size: cover;
   filter:saturate(1.2);
 }
+.bg-url-partenaire{
+  background-position: center;
+  background-repeat:no-repeat;
+  background-size: contain;
+  filter:saturate(1.2);
+}
 .filter_image{
   /* filter:opacity(20%); */
   filter:sepia(2);
@@ -128,18 +134,19 @@ body h1, body h2, body h3, body h4, body h5, body h6{
  align-items:center;
 }
 .item-partener{
-  min-width:240px;
+  /* min-width:500px;
   height:100px;
-  position:relative;
+  position:relative; */
   /* background-color:white; */
-  display: block;
+  /* display: block; */
+  background-color: #231942;
 }
 
 .item{
  min-width:260px;
  height:100%;
  position:relative;
- background-color:white;
+ background-color: white;
  margin:auto 3px;
  display: block;
 }

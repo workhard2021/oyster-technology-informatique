@@ -22,7 +22,7 @@ export const ItemOffres=({data}:any)=>{
           }
       }
   },[scroll]);
-  return (<div className="relative w-full m-auto p-2 mb-[65px]">
+  return (<div className="relative w-full m-auto mb-[65px]">
                <h2 className="relative w-full text-center mb-[65px] font-fontWeightBig opacity-0 visible-transition">Notre offre de services</h2>
                <div className="relative w-full flex justify-center items-start flex-wrap">
                  {data && data.map((value:any,index:number)=>

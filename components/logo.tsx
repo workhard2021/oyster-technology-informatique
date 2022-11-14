@@ -16,7 +16,7 @@ export const LogoSection=({data}:any)=>{
                     <h1 style={{fontWeight:'600'}} className="text-center text-white md:text-[4vw] text-[30px] text-title-shadow">{data.title}</h1>
                 </div>
            </div>
-           <p style={{fontWeight:'600'}} className="mt-[65px] px-6 md:absolute md:bottom-24 md:left-16 relative bottom-0 left-0 md:py-0 leading-snug md:w-[30%] w-full text-[25px] md:text-[#d4cfcf] text-[#808080]">
+           <p style={{fontWeight:'600'}} className="mt-[65px] px-4 md:absolute md:bottom-24 md:left-16 relative bottom-0 left-0 md:py-0 leading-snug md:w-[30%] w-full text-[25px] md:text-[#d4cfcf] text-[#808080]">
               <strong className="font-bolder">{data.description}</strong>
            </p>
     </div>)
