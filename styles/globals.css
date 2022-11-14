@@ -96,7 +96,8 @@ body h1, body h2, body h3, body h4, body h5, body h6{
   background-position: center;
   background-repeat:no-repeat;
   background-size: cover;
-  filter:opacity(20%);
+  filter: brightness(0.30);
+  opacity: 0.5;
 }
 .bg-url-logo{
   background-position: center;
