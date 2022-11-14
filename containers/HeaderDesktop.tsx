@@ -21,7 +21,7 @@ export const HeaderDesktop=({data,logo}:any)=>{
       <div className="md:w-[70%] xl:w-[70%] w-full flex justify-center items-center">
         {data && data.map((value:any,index:number)=>{
            return <Fragment key={index}>
-               <div  className="menu-remove menu inline-block text-[#231942] hover:text-red-600 text-[18px] h-auto md:mx-[15px] mx-[15px] uppercase font-normal">
+               <div  className="menu-remove menu inline-block text-[#231942] hover:text-red-600 text-[17px] h-auto md:mx-[12px] mx-[12px] uppercase font-normal">
                {value.url!=='/'?<Link className="whitespace-nowrap" href={value.url}>{value.title}</Link>
                :
                  <span className="whitespace-nowrap hover:text-red-600 transition-all duration-75 cursor-pointer" onMouseEnter={(e)=>changeImage(e,value.sous_menu[0]?.image)}>{value.title} <AiOutlineDown className='inline' /></span>

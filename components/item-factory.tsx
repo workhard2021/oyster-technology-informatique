@@ -3,8 +3,8 @@ import { ListMetier } from "./listeMetier";
 export const ItemFactory=({data,title}:any)=>{
     if((!data) || (data && data.length===0)){return null}
     return (<div className="relative w-full mx-auto">
-                {title? <p className="w-full m-auto text-justify">{title}</p>:null}
-                <div className="z-0 w-1 flex justify-center items-center relative top-[3%] left-[50%] bg-blue-900 rounded-t-full h-[90px]">
+                {title? <p className="w-full m-auto text-justify mb-8">{title}</p>:null}
+                <div className="z-0 w-1 flex justify-center items-center relative top-[3%] left-[50%] bg-blue-900 rounded-t-full h-[60px]">
                      <div className=" absolute w-[15px] h-[15px] m-auto rounded-full bg-green-500">
                      </div>
                 </div>
@@ -20,7 +20,7 @@ export const ItemFactory=({data,title}:any)=>{
                          </div>
                      })}
                   </div>
-                  <div className="z-0 w-1 flex justify-center items-center relative top-[3%] left-[50%] bg-blue-900 rounded-b-full h-[90px]">
+                  <div className="z-0 w-1 flex justify-center items-center relative top-[3%] left-[50%] bg-blue-900 rounded-b-full h-[60px]">
                      <div className=" absolute w-[15px] h-[15px] m-auto rounded-full bg-green-500">
                      </div>
                   </div>

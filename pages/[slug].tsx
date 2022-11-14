@@ -120,7 +120,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
             image:'../images/metiers/digital-transformation-image.jpg',
             icon:'../images/metiers/digital-transformation.jpeg',
             sub_title:'Vous accompagner dans l’identification des facteurs clés permettant de mettre en place un dispositif unique de transformation digitale.',
-            name:'Digital Trasformation',
+            name:'Digital Transformation',
             slug:'digital-transformation',
             expertise:'EXPERTISES SECTORIELLES',
             data:[

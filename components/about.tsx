@@ -83,7 +83,7 @@ About.defaultProps={
      first_description:"Animés par la conviction que le conseil ne se résume pas au consulting, ni à la consultation, nous accompagnons nos clients dans la recherche et la mise en œuvre de solutions exécutables, car consensuelles.",
      first_image:'../images/about.jpeg',
      two_title:'Founded',
-     two_sub_title:"A sa création à Paris en 1999, Degetel était une petite agence web à fort focus technologique. Depuis lors, sa forte croissance, entièrement d’origine organique, l’a transformé en groupe fédérant plus de 600 personnes réparties sur 3 pays et 7 implantations. Ayant pleinement atteint l'objectif stratégique qu'il s'était fixé, Degetel a décidé, au début de l'année 2020, d'apporter une nouvelle impulsion à son développement d'activités en rejoignant le Groupe Technology & Strategy",
+     two_sub_title:"A sa création à Paris en 1999, Oyster technology était une petite agence web à fort focus technologique. Depuis lors, sa forte croissance, entièrement d’origine organique, l’a transformé en groupe fédérant plus de 600 personnes réparties sur 3 pays et 7 implantations. Ayant pleinement atteint l'objectif stratégique qu'il s'était fixé, Oyster technology a décidé, au début de l'année 2020, d'apporter une nouvelle impulsion à son développement d'activités en rejoignant le Groupe Technology & Strategy",
      tree_title:'50M montly enrichments',
      tree_sub_title:'La route commença à s’enfoncer. On ne voyait plus les grillages sur les cotés, mais juste des rochers. Et soudain, les voitures s’arrêtèrent devant une énorme porte en métal entourée de béton.',
      four_title:'4K users',

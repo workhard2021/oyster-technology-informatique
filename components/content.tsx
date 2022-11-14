@@ -15,7 +15,7 @@ export const Content=({data}:any)=>{
                <div className="w-full md:pl-8 pl-6">
                  {data.list_description.map((value:any,key:number)=>{
                     return (<li key={key}>
-                           <span className="pr-1 font-extrabold">{value.title} </span>
+                           <span className="pr-1 font-extrabold leading-10">{value.title} </span>
                            <span>{value.description}</span>
                    </li>)
                 })}
@@ -30,7 +30,7 @@ export const Content=({data}:any)=>{
               <p className="m-auto py-6 w-full md:w-[80%] md:text-[24px] text-[18px] text-[#983098] font-bold text-center">{data.title_description_2}</p>
               <div className="w-full pb-8 text-[#545454]">
               {data.list_description_2.map((value:any,key:number)=>{
-                 return (<div className="text-[16px]" key={key}>
+                 return (<div className="text-[16px] leading-10" key={key}>
                            <span className="pr-1 font-extrabold">{value.title}:</span>
                            <span>{value.description}</span>
                  </div>)
