@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { Fragment, useEffect, useState } from "react"
+import { AiOutlineDown } from 'react-icons/ai';
 import {BiChevronRight} from 'react-icons/bi';
 
 export const HeaderDesktop=({data,logo}:any)=>{
@@ -23,7 +24,7 @@ export const HeaderDesktop=({data,logo}:any)=>{
                <div  className="menu-remove menu inline-block text-[#231942] hover:text-red-600 text-[18px] h-auto md:mx-[15px] mx-[15px] uppercase font-normal">
                {value.url!=='/'?<Link className="whitespace-nowrap" href={value.url}>{value.title}</Link>
                :
-                 <span className="whitespace-nowrap hover:text-red-600 transition-all duration-75 cursor-pointer" onMouseEnter={(e)=>changeImage(e,value.sous_menu[0]?.image)}>{value.title}</span>
+                 <span className="whitespace-nowrap hover:text-red-600 transition-all duration-75 cursor-pointer" onMouseEnter={(e)=>changeImage(e,value.sous_menu[0]?.image)}>{value.title} <AiOutlineDown className='inline' /></span>
                }
                {value.sous_menu &&<div id={`menu_${index+1}`} className="py-12 sub_menu absolute md:h-[400px] w-[80%] left-[10%] flex">
                    <div className="relative w-full h-full flex p-0 bg-white shadow-md">
