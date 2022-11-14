@@ -1,5 +1,5 @@
 import { AiFillCheckCircle } from "react-icons/ai";
-import { ListMetier } from "./listeMetie";
+import { ListMetier } from "./listeMetier";
 export const ItemFactory=({data,title}:any)=>{
     if((!data) || (data && data.length===0)){return null}
     return (<div className="relative w-full mx-auto">
@@ -36,7 +36,7 @@ export const FactoryContainer=({metier,data,title,title_2,data_2,image,name}:any
                    <ItemFactory data={data_2} title={title_2}/>
                </div>
                <div className="md:w-[50%] h-auto w-full flex justify-center items-start mx-auto">
-                   <div className="mx-auto w-[450px] h-[300px] bg-url" style={{backgroundImage:`url(${image})`}}/>
+                   <div className="mx-auto rounded-full w-[450px] h-[450px] bg-url" style={{backgroundImage:`url(${image})`}}/>
                </div>
             </div>
             <ListMetier data={metier}/>
