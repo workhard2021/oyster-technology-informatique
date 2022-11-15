@@ -103,10 +103,13 @@ body h1, body h2, body h3, body h4, body h5, body h6{
   background-repeat:no-repeat;
   background-size: cover;
   filter:opacity(20%);
-  /* filter: brightness(0.30); */
-  /* opacity: 0.7; */
 }
-
+.bg_logo_home{
+  background-position: center;
+  background-repeat:no-repeat;
+  background-size: cover;
+  filter: brightness(0.90);
+}
 .bg-url-logo{
   background-position: center;
   background-repeat:no-repeat;
@@ -126,7 +129,7 @@ body h1, body h2, body h3, body h4, body h5, body h6{
 .changeImage{
   transition: all 0.5s ease-in-out;
 }
-
+.
 .btn_navigation{
   display: none;
 }
@@ -136,6 +139,8 @@ body h1, body h2, body h3, body h4, body h5, body h6{
 .hover_scale_nos_idee{
   transition:all 0.7s ease-in-out;
 }
+
+
 .hover_scale_nos_idee:hover{
   transform: scale(1.05);
 }
