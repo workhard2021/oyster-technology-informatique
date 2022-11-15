@@ -5,7 +5,7 @@ export const ItemFactory=({data,title}:any)=>{
     return (<div className="relative w-full mx-auto">
                 {title? <p className="w-full m-auto text-justify mb-8">{title}</p>:null}
                 <div className="z-0 w-1 flex justify-center items-center relative top-[3%] left-[50%] bg-blue-900 rounded-t-full h-[60px]">
-                     <div className=" absolute w-[15px] h-[15px] m-auto rounded-full bg-green-500">
+                     <div className=" absolute w-[15px] h-[15px] m-auto rounded-full bg-blue-600">
                      </div>
                 </div>
                  <div className="z-10 relative flex flex-wrap md:w-[75%] w-[95%] m-auto p-5 py-8 my-0 bg-white rounded-md shadow-xl">
@@ -21,7 +21,7 @@ export const ItemFactory=({data,title}:any)=>{
                      })}
                   </div>
                   <div className="z-0 w-1 flex justify-center items-center relative top-[3%] left-[50%] bg-blue-900 rounded-b-full h-[60px]">
-                     <div className=" absolute w-[15px] h-[15px] m-auto rounded-full bg-green-500">
+                     <div className=" absolute w-[15px] h-[15px] m-auto rounded-full bg-blue-600">
                      </div>
                   </div>
     </div>);
