@@ -1,21 +1,20 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { Fragment, useEffect, useState } from "react"
+import { Fragment, useState } from "react"
 import { AiOutlineDown } from 'react-icons/ai';
 import {BiChevronRight} from 'react-icons/bi';
 
 export const HeaderDesktop=({data,logo}:any)=>{
     const route=useRouter();
-    // const [path,setPath]=useState('');
     const [currentImage,setCurrentImage]=useState('../images/1.jpeg');
-     const changeImage=(e:any,currentImage:string)=>{
+    const changeImage=(e:any,currentImage:string)=>{
         e.preventDefault();
         setCurrentImage(currentImage);
-     }
-     return (<nav className="hidden md:flex shadow-sm shadow-blue-200 justify-around w-full">
+    }
+    return (<nav className="hidden md:flex shadow-sm shadow-blue-200 justify-around w-full">
       <div className="md:w-[20%] xl:w-[30%] w-full flex justify-center items-center">
           <div className="cursor-pointer text-white md:w-[60%] w-[50%] md:h-[80px]">
-                 <div onClick={()=>route.push('/')}  className="w-full h-full bg-url-logo" style={{backgroundImage:`url(${logo})`}} />
+                 <div onClick={()=>route.push(process.env.NEXT_PUBLIC_HOME||'/')}  className="w-full h-full bg-url-logo" style={{backgroundImage:`url(${logo})`}} />
           </div>
       </div>
       <div className="md:w-[70%] xl:w-[70%] w-full flex justify-center items-center">
