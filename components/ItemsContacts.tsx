@@ -21,7 +21,7 @@ ItemsContacts.defaultProps={
        title:'FAIRE PARTIE DE NOTRE ÉQUIPE',
        sub_title:'Nous croyons au croisement des expertises, à l’intelligence collective et à la singularité des talents.',
        title_question:'Vous aussi ? Nous sommes faits pours nous entendre.',
-       email:'email@gmail.com',
+       email: process.env.NEXT_PUBLIC_EMAIL,
        email_title:'Rejoignez-nous',
        image:'../images/teams.jpeg',
     }
