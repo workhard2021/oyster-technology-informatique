@@ -23,7 +23,6 @@ export const HEADER_MENU=[
        {url:'/',title:'nous rejoindre',sub_title:'',
           sous_menu:[
            {url:'/candidature-spontanee',title:'Candidature spontanée',image:'../images/candidature-spontanee.jpg'},
-           {url:'/',title:'A vos côtés',image:'../images/3.jpeg',}
         ]},
         {url:'/contact',title:'Contact', sub_title:'exportises métiers'},
 ]

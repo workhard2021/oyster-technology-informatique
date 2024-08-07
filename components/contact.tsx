@@ -30,7 +30,7 @@ export const Contact=({data}:any)=>{
              </form>
              <div className="w-full m-auto py-8">
                 <p className="font-bold py-2 text-[#8a8a8a]">Le texte généré est du pseudo latin et peut donner l&lsquo;impression d&lsquo;être du vrai texte</p>
-                <p className="py-2 text-[#8a8a8a]">Si vous aimez la photographie d&apos;art et l&apos;esprit zen, jetez un œil sur le site de ce photographe à Palaiseau, en Essonne (France).</p>
+                <p className="py-2 text-[#8a8a8a]">Si vous aimez la photographie d&apos;art et l&apos;esprit zen, jetez un œil sur le site de ce photographe à Palaiseau, en Essonne (Maroc).</p>
              </div>
          </div>
           {/* item contacts */}
@@ -40,21 +40,21 @@ export const Contact=({data}:any)=>{
                 <div className="m-auto">
                       <HiOutlineLocationMarker size={40} className="inline-block text-[#122480]"/>
                      <div className="text-md font-bold w-full py-2 text-[#122480]">Notre bureau principal</div>
-                     <p className="w-full text-gray-500">Casablanca rue 3436 maroc</p> 
+                     <p className="w-full text-gray-500">{process.env.NEXT_PUBLIC_ADDRESS}</p> 
                 </div>
               </div>
               <div className="m-2 z-10 md:h-[230px] h-[240px] w-[44%] p-2 break-all md:w-[230px] bg-white text-center shadow-lg rounded-md flex items-center justify-center flex-wrap">
                 <div className="m-auto">
                       <BsTelephone size={40} className="inline-block text-[#122480]"/>
                      <div className="text-md font-bold w-full py-2 text-[#122480]">Numéro de téléphone</div>
-                     <p className="w-full text-gray-600">+212 75 98 56 20</p> 
+                     <p className="w-full text-gray-600">{process.env.NEXT_PUBLIC_TEL}</p> 
                 </div>
               </div>
               <div className="m-2 z-10 md:h-[230px] h-[240px] w-[44%] p-2 break-all md:w-[230px] bg-white text-center shadow-lg rounded-md flex items-center justify-center flex-wrap">
                 <div className="m-auto">
                       <AiOutlineMail size={40} className="inline-block text-[#122480]"/>
                      <div className="text-md  font-bold w-full py-2 text-[#122480]">Email</div>
-                     <p className="w-full text-gray-600">exemple@gmail.com</p> 
+                     <p className="w-full text-gray-600">{process.env.NEXT_PUBLIC_EMAIL}</p> 
                 </div>
               </div>
          </div>
