@@ -41,7 +41,8 @@ const Entreprise=({presentation}:any)=>{
 Entreprise.defaultProps={
   presentation:{
      title:'Fondé en 2016, Oyster technology mobilise aujourd’hui plus de 60 consultants, aux compétences pluridisciplinaires, pour accompagner ses clients dans la réflexion stratégique et pour définir une méthode d’exécution pilotée par la valeur.',
-     slug:'/notre-adn',
+    //  slug:'/notre-adn',
+    slug:'/nos-valeurs',
      name:'Notre mission',
     sub_title:'Faire émerger des solutions qui font consensus, parce qu’elles sont exécutables et de les déployer de la manière la plus efficiente possible.',
   },

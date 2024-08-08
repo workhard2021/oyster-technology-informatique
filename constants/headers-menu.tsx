@@ -2,7 +2,7 @@ export const HEADER_MENU=[
         {url:'/',title:'LA SOCIETE',
         sub_title:'',
         sous_menu:[
-          {url:'/notre-adn',title:'Notre ADN',image:'../images/societe-1.jpg'},
+          // {url:'/notre-adn',title:'Notre ADN',image:'../images/societe-1.jpg'},
           {url:'/nos-valeurs',title:'Nos valeurs ',image:'../images/societe-2.jpg'},
           {url:'/#partenaire',title:'Ils nous font confiance',image:'../images/societe-3.jpg'},
         ]
