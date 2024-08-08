@@ -13,7 +13,7 @@ export const HeaderMobile=({data,logo}:any)=>{
                 el.classList.toggle('menu_mobile');
             }
       }
-      return (<nav className="md:hidden flex justify-around w-full h-auto py-3">
+      return (<nav className="lg:hidden flex justify-around w-full h-auto py-3">
       <div className="w-[20%] flex items-center">
           <div onClick={()=>route.push(process.env.NEXT_PUBLIC_HOME||'/')}  className="relative w-full h-full bg-url-logo" style={{backgroundImage:`url(${logo})`}} />
       </div>

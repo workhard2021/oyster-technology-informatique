@@ -17,8 +17,10 @@ export default function Home() {
                     <Entreprise/>
                     <ItemOffres/>
                </Wrapper>
-               <CarouselScroll data={EXPERTISES_TWO} title="Nos expertises" target_id='carousel-scroll'/>
-               <CarouselScroll order={'md:order-1 md-0'} data={EXPERTISES_FIRST} target_id='carousel-scroll-2'/>
+              <div className='mb-[100px]'>
+                 <CarouselScroll data={EXPERTISES_TWO} title="Nos expertises" target_id='carousel-scroll'/>
+                 <CarouselScroll order={'md:order-1 md-0'} data={EXPERTISES_FIRST} target_id='carousel-scroll-2'/>
+              </div>
             </Container>
   </>)
 }

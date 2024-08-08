@@ -24,9 +24,9 @@ export const ItemOffres=({data}:any)=>{
   },[scroll]);
   return (<div className="relative w-full m-auto mb-[65px]">
                <h2 className="relative w-full text-center mb-[65px] font-fontWeightBig opacity-0 visible-transition">Notre offre de services</h2>
-               <div className="relative w-full flex justify-center items-start flex-wrap">
+               <div className="relative w-full flex justify-center items-stretch md:flex-nowrap gap-8 xl:gap-5 flex-wrap">
                  {data && data.map((value:any,index:number)=>
-                  <div key={index} className="relative md:w-[45%] w-full bg-white shadow-xl shadow-gray-300 pb-8 md:m-4 my-4 mx-auto opacity-0 md:h-[450px] h-auto visible-transition">
+                  <div key={index} className="relative lg:w-[50%] rounded-sm overflow-hidden w-full bg-white shadow-md shadow-gray-300 pb-2 mx-auto opacity-0 h-auto visible-transition">
                           <div className="w-full bg-[#122480] px-8 py-8">
                                 <p className="text-white  md:text-[16px] text-[15px]">{value.sub_title}</p>
                                 <h3 className="text-white md:text-[25px] text-[20px]">{value.title}</h3>

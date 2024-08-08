@@ -11,7 +11,7 @@ export const HeaderDesktop=({data,logo}:any)=>{
         e.preventDefault();
         setCurrentImage(currentImage);
     }
-    return (<nav className="hidden md:flex shadow-sm shadow-blue-200 justify-around w-full">
+    return (<nav className="hidden lg:flex shadow-sm shadow-blue-200 justify-around w-full">
       <div className="md:w-[20%] xl:w-[30%] w-full flex justify-center items-center">
           <div className="cursor-pointer text-white md:w-[60%] w-[50%] md:h-[80px]">
                  <div onClick={()=>route.push(process.env.NEXT_PUBLIC_HOME||'/')}  className="w-full h-full bg-url-logo" style={{backgroundImage:`url(${logo})`}} />
