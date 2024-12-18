@@ -6,12 +6,12 @@ export const CandidatureSpontanee=({listCountry,paraph}:any)=>{
              <form className="w-full md:my-8 my-4">
                  <div className="mb-3 w-full flex justify-between flex-wrap">
                    <div className="w-full md:w-[45%] my-2 flex justify-center flex-wrap">
-                          <label className="w-full block text-[#122480] text-[18px]" htmlFor="fir_name"></label>
+                          <label className="w-full block text-[#122480] text-[18px]" htmlFor="first_name"></label>
                           <input placeholder="Entrez votre nom" className="outline-none w-full inline-block h-[40px] border-b-[1px] border-blue-900" type="text" name="fir_name" id="fir_name"/>
                     </div>
                     <div className="w-full md:w-[45%] my-2 flex justify-center flex-wrap">
                         <label className="w-full block text-[#122480] text-[18px]" htmlFor="last_name"></label>
-                        <input placeholder="Entrez votre nom" className="outline-none p-1 w-full inline-block h-[40px] border-b-[1px] border-blue-900" type="text" name="last_name" id="last_name"/>
+                        <input placeholder="Entrez votre prénom" className="outline-none p-1 w-full inline-block h-[40px] border-b-[1px] border-blue-900" type="text" name="last_name" id="last_name"/>
                      </div>
                  </div>
                  <div className="mb-3 w-full flex justify-between flex-wrap">
@@ -27,8 +27,7 @@ export const CandidatureSpontanee=({listCountry,paraph}:any)=>{
                  <div className="mb-3 w-full flex justify-between flex-wrap">
                    <div className="w-full md:w-[45%] my-2 flex justify-center flex-wrap">
                           <label className="w-full block text-[#122480] text-[18px]" htmlFor="country"></label>
-                          <select placeholder="Entrez votre nom" className="outline-none w-full inline-block h-[40px] border-b-[1px] border-blue-900" name="country" id="country">
-                               <option value=''>Pays</option>
+                          <select placeholder="Selectionez un pays" className="outline-none w-full inline-block h-[40px] border-b-[1px] border-blue-900" name="country" id="country">
                                {listCountry.map((value:any,index:number)=>{
                                  return (<option key={index} value={value.name}>{value.name}</option>)
                                })}

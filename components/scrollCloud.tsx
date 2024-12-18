@@ -29,7 +29,7 @@ export const ScrollCloud = ({data,title,sub_title}:any) => {
     return (<div className="w-full mb-[65px]">
          <div id="partenaire"></div>
         <h2 className="w-full text-center mb-[35px] text-[35px] m-auto">{title}</h2>
-        <div className="md:w-[50%] md:p-8 p-4 w-full text-center m-auto mb-[10px]">{sub_title}</div>
+        {/*<div className="md:w-[50%] md:p-8 p-4 w-full text-center m-auto mb-[10px]">{sub_title}</div>*/}
         <div className="relative py-4 m-auto md:w-[100%] w-full">
         <div className="relative md:w-[80%] w-full m-auto">
              <div className="absolute w-full top-[50%] h-0 m-auto flex z-20 rounded-md justify-between items-center">
@@ -58,5 +58,6 @@ ScrollCloud.defaultProps={
            {id:6,image:'../images/partenaires/telecom.png'},
         ],
         title:'Ils nous font confiance',
-        sub_title:'Puisque le Shadow IT échappe souvent aux processus de régulation en vigueur dans l’entreprise, des inquiétudes quant à la sécurité doivent être soulevées'
+        sub_title:'',
+        //sub_title:'Puisque le Shadow IT échappe souvent aux processus de régulation en vigueur dans l’entreprise, des inquiétudes quant à la sécurité doivent être soulevées'
 }

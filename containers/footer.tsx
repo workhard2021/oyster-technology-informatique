@@ -26,7 +26,7 @@ export const Footer=({newtwork,right,page}:any)=>{
                                   })}
            </div> */}
            <div className="md:w-[40%] w-full flex md:justify-end items-center md:my-auto my-3">
-               <p className="first-letter:capitalize m-3"> &copy; 2022 - {right}</p>
+               <p className="first-letter:capitalize m-3"> &copy; 2024 - {right}</p>
            </div>
         </div>
     </footer>)
