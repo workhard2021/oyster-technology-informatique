@@ -16,8 +16,8 @@ export const LogoSection=({data}:any)=>{
             <div  className="relative w-full md:h-[600px] h-[300px] md:overflow-hidden">
                 <div id="home-logo" className="absolute top-[15%] left-0 w-full h-full bg_logo_home" style={{backgroundImage:`url(${data.image})`}}/>
                 <div className="relative md:top-[140px] z-10 top-[100px]">
-                    <h2 className="text-center uppercase text-white md:text-[25px] text-[20px] py-4">{data.sub_title}</h2>
-                    <p style={{fontWeight:'600'}} className="m-auto text-center text-white text-[18px] w-full p-2 leading-snug md:w-[50%] ">{data.description}</p>
+                    <h2 className="text-center uppercase text-white md:text-[25px] text-[20px] py-4 text-title-shadow">{data.sub_title}</h2>
+                    <p style={{fontWeight:'600'}} className="m-auto text-center text-white text-[18px] w-full p-2 leading-snug md:w-[50%] text-title-shadow">{data.description}</p>
                     {/* <h1 style={{fontWeight:'600'}} className="text-center text-white md:text-[4vw] text-[30px] text-title-shadow">{data.title}</h1>*/}
                 </div>
            </div>
