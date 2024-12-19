@@ -30,7 +30,7 @@ LogoSection.defaultProps={
      data:{
          sub_title:'Conseil en stratégie et management',
          titlee:'',
-         description:"Oyster technology est un cabinet indépendant de conseil en stratégie qui accompagne ses clients dans leur dynamique de création de valeur et de performance.",
+         description:"Oyster Technology est un cabinet de conseil en stratégie, accompagnant ses clients dans la création de valeur et la performance.",
          image:'../images/home.jpg'
      }
 }
