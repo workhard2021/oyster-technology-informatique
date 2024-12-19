@@ -16,19 +16,20 @@ export const LogoSection=({data}:any)=>{
             <div  className="relative w-full md:h-[600px] h-[300px] md:overflow-hidden">
                 <div id="home-logo" className="absolute top-[15%] left-0 w-full h-full bg_logo_home" style={{backgroundImage:`url(${data.image})`}}/>
                 <div className="relative md:top-[140px] z-10 top-[100px]">
-                    <h2 className="text-center uppercase text-white md:text-[25px] text-[20px] py-4 text-title-shadow">{data.sub_title}</h2>
-                    <h1 style={{fontWeight:'600'}} className="text-center text-white md:text-[4vw] text-[30px] text-title-shadow">{data.title}</h1>
+                    <h2 className="text-center uppercase text-white md:text-[25px] text-[20px] py-4">{data.sub_title}</h2>
+                    <p style={{fontWeight:'600'}} className="m-auto text-center text-white text-[18px] w-full p-2 leading-snug md:w-[50%] ">{data.description}</p>
+                    {/* <h1 style={{fontWeight:'600'}} className="text-center text-white md:text-[4vw] text-[30px] text-title-shadow">{data.title}</h1>*/}
                 </div>
            </div>
-           <p style={{fontWeight:'600'}} className="mt-[65px] px-4 md:absolute md:bottom-24 md:left-16 relative bottom-0 left-0 md:py-0 z-10 leading-snug md:w-[30%] w-full text-[25px] md:text-[#d4cfcf] text-[#808080]">
+             {/*<p style={{fontWeight:'600'}} className="mt-[65px] px-4 md:absolute md:bottom-24 md:left-16 relative bottom-0 left-0 md:py-0 z-10 leading-snug md:w-[30%] w-full text-[25px] md:text-[#d4cfcf] text-[#808080]">
               <strong className="font-bold ">{data.description}</strong>
-           </p>
+           </p>*/}
     </div>)
 }
 LogoSection.defaultProps={
      data:{
          sub_title:'Conseil en stratégie et management',
-         title:'Execution First',
+         titlee:'',
          description:"Oyster technology est un cabinet indépendant de conseil en stratégie qui accompagne ses clients dans leur dynamique de création de valeur et de performance.",
          image:'../images/home.jpg'
      }
